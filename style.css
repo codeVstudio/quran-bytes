@@ -1486,12 +1486,77 @@ svg {
   overflow-x: clip;
 }
 
+.closing-sky {
+  position: absolute;
+  inset: 0;
+  max-width: 1480px;
+  margin-inline: auto;
+  z-index: 1;
+  color: var(--gold-text);
+  pointer-events: none;
+}
+
+.closing-sky svg {
+  position: absolute;
+  overflow: visible;
+}
+
+.closing-star-one {
+  right: 12%;
+  top: 112px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.65;
+}
+
+.closing-star-two {
+  right: 23%;
+  top: 186px;
+  width: 11px;
+  height: 11px;
+  opacity: 0.52;
+}
+
+.closing-star-three {
+  right: 7.5%;
+  top: 235px;
+  width: 12px;
+  height: 12px;
+  opacity: 0.56;
+}
+
+.closing-star-four {
+  right: 17.5%;
+  top: 282px;
+  width: 8px;
+  height: 8px;
+  opacity: 0.45;
+}
+
+.closing-star-five {
+  right: 30%;
+  top: 108px;
+  width: 8px;
+  height: 8px;
+  opacity: 0.42;
+}
+
+.closing-star-six {
+  left: 44%;
+  top: 132px;
+  width: 9px;
+  height: 9px;
+  opacity: 0.4;
+}
+
 .closing .section-topline {
   border-color: var(--line);
   color: var(--muted);
 }
 
 .closing-title-row {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -1530,6 +1595,8 @@ svg {
 }
 
 .closing-actions {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-top: 1px solid var(--line);
@@ -1624,6 +1691,8 @@ svg {
 }
 
 .site-footer {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -3328,6 +3397,33 @@ svg {
 
   .closing {
     padding-top: 35px;
+  }
+
+  .closing-star-one {
+    right: 7%;
+    top: 46px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .closing-star-two {
+    right: 16%;
+    top: 86px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .closing-star-three {
+    right: 6%;
+    top: 138px;
+    width: 9px;
+    height: 9px;
+  }
+
+  .closing-star-four,
+  .closing-star-five,
+  .closing-star-six {
+    display: none;
   }
 
   .closing-title-row {

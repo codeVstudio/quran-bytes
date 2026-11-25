@@ -162,7 +162,7 @@
       event.preventDefault();
       const feedback = $("#updates-feedback");
       feedback.textContent =
-        "Email format looks good. Sign-up isn’t connected yet — nothing was sent or saved.";
+        "Thank you — launch sign-up is opening soon, and nothing was sent or saved yet.";
       feedback.classList.add("is-feedback");
     });
     // Remain disabled without JS: never fall back to a GET containing an email.
@@ -199,8 +199,8 @@
       const feedback = $("#contribute-feedback");
       const selected = $$('input[name="skills"]:checked', event.currentTarget);
       feedback.textContent = selected.length
-        ? "Thank you for the intention. This form isn’t connected yet — your details weren’t sent or saved."
-        : "Choose at least one way you’d like to help. This is a preview; no details are sent.";
+        ? "Thank you for the intention. Contribution sign-up is opening soon — your details weren’t sent or saved yet."
+        : "Choose at least one way you’d like to help before submitting.";
       feedback.classList.add("is-feedback");
     });
   }
