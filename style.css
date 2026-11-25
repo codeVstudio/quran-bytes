@@ -220,34 +220,42 @@ svg {
 
 /* Navigation */
 .site-header {
-  --header-scrolled-h: 83px;
+  --header-scrolled-h: 76px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 105px;
+  height: 88px;
   padding: 0 var(--pad-right) 0 var(--pad-left);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid transparent;
+  background: var(--green);
+  color: var(--ivory);
+  border-bottom: 1px solid #3a5c48;
   transition:
+    height 0.3s,
     background 0.3s,
     color 0.3s,
     border-color 0.3s;
 }
 
 .site-header.is-scrolled {
-  background: var(--ivory);
-  border-color: var(--line);
-  height: 83px;
+  background: var(--green);
+  color: var(--ivory);
+  border-color: #3a5c48;
+  height: 76px;
 }
 
 .site-header.is-dark {
   color: var(--ivory);
   background: var(--green);
   border-color: #3a5c48;
+}
+
+.site-header a:focus-visible {
+  outline-color: var(--gold);
 }
 
 .brand {
@@ -267,7 +275,7 @@ svg {
 }
 
 .brand-period {
-  color: var(--gold-text);
+  color: var(--gold);
 }
 
 .main-nav {
@@ -317,7 +325,7 @@ svg {
   position: relative;
   height: 100svh;
   min-height: clamp(580px, 100svh, 920px);
-  padding: clamp(118px, 18svh, 210px) var(--pad-right) clamp(64px, 9svh, 95px) var(--pad-left);
+  padding: clamp(128px, 17svh, 200px) var(--pad-right) clamp(64px, 9svh, 95px) var(--pad-left);
   overflow-x: clip;
 }
 
@@ -513,9 +521,9 @@ svg {
   z-index: 1;
   pointer-events: none;
   left: calc(50% + 0.235 * min(100vw, 1485px));
-  top: 51%;
+  top: 53%;
   width: min(42vw, 640px);
-  height: min(82vh, 780px);
+  height: min(80vh, 760px);
   transform: translate(-50%, -50%);
   perspective: 1200px;
 }
@@ -2348,43 +2356,43 @@ svg {
 /* Short laptops & compact desktop windows (e.g. 1280x720, 1366x768, 1024x600) */
 @media (min-width: 1000px) and (max-height: 780px) {
   :root {
-    --book-width: clamp(168px, min(18.2vw, 28.5svh), 268px);
+    --book-width: clamp(164px, min(17.8vw, 27.5svh), 260px);
   }
 
   .site-header {
-    --header-scrolled-h: 72px;
-    height: 76px;
+    --header-scrolled-h: 64px;
+    height: 68px;
   }
 
   .site-header.is-scrolled {
-    height: 72px;
+    height: 64px;
   }
 
   .hero {
     height: auto;
     min-height: 100svh;
-    padding-top: clamp(78px, 11.5svh, 128px);
-    padding-bottom: 28px;
+    padding-top: clamp(90px, 13svh, 128px);
+    padding-bottom: 24px;
   }
 
   .hero h1 {
-    font-size: clamp(94px, min(11.4vw, 22.5svh), 170px);
+    font-size: clamp(92px, min(11.2vw, 21.5svh), 168px);
     line-height: 0.84;
-    margin: 10px 0 14px -5px;
+    margin: 8px 0 12px -5px;
   }
 
   .hero-description {
-    margin-top: 12px;
-  }
-
-  .hero-cta {
     margin-top: 10px;
   }
 
+  .hero-cta {
+    margin-top: 8px;
+  }
+
   .visual-stage {
-    top: 51%;
-    width: min(41vw, 590px);
-    height: min(83svh, 720px);
+    top: 54.5%;
+    width: min(40vw, 575px);
+    height: min(79svh, 690px);
   }
 }
 
@@ -2417,12 +2425,12 @@ svg {
   }
 
   .site-header {
-    --header-scrolled-h: 74px;
-    height: 89px;
+    --header-scrolled-h: 68px;
+    height: 74px;
   }
 
   .site-header.is-scrolled {
-    height: 74px;
+    height: 68px;
   }
 
   .brand {
@@ -2785,13 +2793,13 @@ svg {
   }
 
   .site-header {
-    --header-scrolled-h: 64px;
-    height: 74px;
+    --header-scrolled-h: 60px;
+    height: 64px;
     padding: 0 var(--pad-right) 0 var(--pad-left);
   }
 
   .site-header.is-scrolled {
-    height: 64px;
+    height: 60px;
   }
 
   .brand {
@@ -3390,12 +3398,12 @@ svg {
   }
 
   .site-header {
-    --header-scrolled-h: 54px;
-    height: 60px;
+    --header-scrolled-h: 50px;
+    height: 54px;
   }
 
   .site-header.is-scrolled {
-    height: 54px;
+    height: 50px;
   }
 
   .brand {
