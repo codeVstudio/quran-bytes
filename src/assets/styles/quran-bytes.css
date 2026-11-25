@@ -1756,6 +1756,7 @@ svg {
   font-size: 13px;
   font-weight: 500;
   color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
 }
 
 .email-form input:focus,
@@ -1764,7 +1765,8 @@ svg {
 }
 
 .email-form input::placeholder {
-  color: var(--ink);
+  color: #050a08;
+  -webkit-text-fill-color: #050a08;
   font-weight: 600;
   opacity: 1;
 }
