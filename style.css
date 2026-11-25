@@ -645,16 +645,27 @@ svg {
   background: #ede7d6;
   transform: translateZ(17px);
   border: 1px solid #c8bfa3;
-  box-shadow: inset -9px 0 15px #9e8f6729;
+  padding: 5.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.book-page-block img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.88;
 }
 
 .book-page-block::after {
   content: "";
   position: absolute;
-  inset: 20px 16px;
-  border: 1px solid #c3b48b;
-  outline: 1px solid #c3b48b66;
-  outline-offset: 4px;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset -12px 0 18px #9e8f6738;
 }
 
 .book-edge {
