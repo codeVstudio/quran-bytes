@@ -16,7 +16,7 @@
   --gutter: max(5.55vw, calc((100vw - var(--content-max)) / 2));
   --pad-left: max(var(--gutter), env(safe-area-inset-left));
   --pad-right: max(var(--gutter), env(safe-area-inset-right));
-  --book-width: clamp(192px, 19.2vw, 290px);
+  --book-width: clamp(220px, 22vw, 336px);
 }
 
 * {
@@ -512,10 +512,10 @@ svg {
   position: absolute;
   z-index: 1;
   pointer-events: none;
-  left: calc(50% + 0.235 * min(100vw, 1485px));
+  left: calc(50% + 0.24 * min(100vw, 1485px));
   top: 51%;
-  width: min(42vw, 640px);
-  height: min(82vh, 780px);
+  width: min(44vw, 680px);
+  height: min(86vh, 830px);
   transform: translate(-50%, -50%);
   perspective: 1200px;
 }
@@ -2644,7 +2644,7 @@ svg {
 /* Short laptops & compact desktop windows (e.g. 1280x720, 1366x768, 1024x600) */
 @media (min-width: 1000px) and (max-height: 780px) {
   :root {
-    --book-width: clamp(168px, min(18.2vw, 28.5svh), 268px);
+    --book-width: clamp(188px, min(20.5vw, 32svh), 305px);
   }
 
   .site-header {
@@ -2679,8 +2679,8 @@ svg {
 
   .visual-stage {
     top: 51%;
-    width: min(41vw, 590px);
-    height: min(83svh, 720px);
+    width: min(43vw, 630px);
+    height: min(86svh, 760px);
   }
 }
 
@@ -2709,7 +2709,7 @@ svg {
 
   :root {
     --gutter: 7vw;
-    --book-width: clamp(166px, 23.5vw, 232px);
+    --book-width: clamp(186px, 26vw, 262px);
   }
 
   .site-header {
@@ -2998,7 +2998,7 @@ svg {
 /* Narrow portrait tablets & large split-screen panes (600px–719px) */
 @media (min-width: 600px) and (max-width: 719px) {
   :root {
-    --book-width: clamp(150px, 23vw, 188px);
+    --book-width: clamp(168px, 25.5vw, 212px);
   }
 
   .hero-copy {
@@ -3091,7 +3091,7 @@ svg {
 
   :root {
     --gutter: 6vw;
-    --book-width: clamp(96px, min(34vw, 17.5svh), 174px);
+    --book-width: clamp(110px, min(37.5vw, 19.5svh), 196px);
   }
 
   html {
@@ -3135,7 +3135,7 @@ svg {
     --mobile-stage-gap: clamp(205px, 36svh, 340px);
     height: auto;
     min-height: 100svh;
-    padding-top: clamp(78px, 13.5svh, 122px);
+    padding-top: clamp(72px, 12.2svh, 122px);
     padding-bottom: 44px;
     overflow: hidden;
   }
@@ -3187,8 +3187,8 @@ svg {
   .visual-stage {
     top: var(--mobile-stage-top, 465px);
     left: 50%;
-    width: min(330px, 86vw);
-    height: clamp(198px, 36svh, 355px);
+    width: min(350px, 88vw);
+    height: clamp(198px, 36svh, 375px);
     transform: translate(-50%, -50%);
   }
 
@@ -3737,7 +3737,7 @@ svg {
 /* Landscape phones & very short viewports (must follow max-width: 599px/359px) */
 @media (max-width: 999px) and (max-height: 560px) {
   :root {
-    --book-width: clamp(104px, 27svh, 154px);
+    --book-width: clamp(116px, 30svh, 174px);
   }
 
   .site-header {
