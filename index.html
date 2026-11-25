@@ -8,6 +8,9 @@
     <script>
       (() => {
         if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          document.documentElement.classList.add("is-intro-active");
+        }
         const scrollToTop = () => {
           try {
             window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -58,6 +61,34 @@
       href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      html.is-intro-active {
+        background: #0f3d2e;
+        overflow: hidden;
+      }
+      html.is-intro-active:not(.is-intro-leaving) body {
+        background: #0f3d2e;
+      }
+      html.is-intro-active .intro {
+        display: flex;
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: #0f3d2e;
+        color: #f6f1e7;
+        align-items: center;
+        justify-content: center;
+      }
+      html.is-intro-active .intro:not(.is-leaving) {
+        opacity: 1;
+      }
+      html.is-intro-active:not(.is-intro-leaving) #main,
+      html.is-intro-active:not(.is-intro-leaving) .site-header,
+      html.is-intro-active:not(.is-intro-leaving) .visual-stage,
+      html.is-intro-active:not(.is-intro-leaving) .site-help {
+        visibility: hidden;
+      }
+    </style>
     <link rel="stylesheet" href="./style.css" />
     <!-- Essential controls load locally; optional animation libraries load later. -->
     <script defer src="./main.js"></script>
@@ -145,10 +176,10 @@
           finished = true;
           clearTimeout(fadeTimer);
           clearTimeout(endTimer);
-          intro.classList.remove("is-visible");
+          intro.classList.remove("is-visible", "is-leaving");
           intro.setAttribute("aria-hidden", "true");
           intro.inert = true;
-          document.documentElement.classList.remove("is-intro-active");
+          document.documentElement.classList.remove("is-intro-active", "is-intro-leaving");
           document.body.removeAttribute("aria-busy");
           try {
             window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -160,7 +191,10 @@
         intro.classList.add("is-visible");
         intro.setAttribute("aria-hidden", "false");
         intro.inert = false;
-        const fadeTimer = setTimeout(() => intro.classList.add("is-leaving"), 2400);
+        const fadeTimer = setTimeout(() => {
+          document.documentElement.classList.add("is-intro-leaving");
+          intro.classList.add("is-leaving");
+        }, 2400);
         const endTimer = setTimeout(finish, 3000);
       })();
     </script>

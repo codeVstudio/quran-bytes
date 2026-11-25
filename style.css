@@ -1976,7 +1976,6 @@ svg {
 
 .intro.is-visible {
   display: flex;
-  animation: intro-veil-in 450ms ease-out;
 }
 
 .intro.is-leaving {
