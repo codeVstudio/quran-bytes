@@ -338,17 +338,17 @@ svg {
 }
 
 .hero-reveal-play #hero-title .text-line>span {
-  animation: hero-line-reveal 1200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: hero-line-reveal 950ms cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-delay: var(--hero-line-delay, 0ms);
   will-change: transform, opacity;
 }
 
 #hero-title .text-line:nth-child(2) {
-  --hero-line-delay: 110ms;
+  --hero-line-delay: 90ms;
 }
 
 #hero-title .text-line:nth-child(3) {
-  --hero-line-delay: 220ms;
+  --hero-line-delay: 180ms;
 }
 
 @keyframes hero-line-reveal {
@@ -1960,7 +1960,7 @@ svg {
   max-width: none;
 }
 
-/* A self-contained 3-second intro. It never waits for an animation CDN. */
+/* A self-contained fast intro that never waits for an animation CDN. */
 .intro {
   display: none;
   position: fixed;
@@ -1971,7 +1971,7 @@ svg {
   align-items: center;
   justify-content: center;
   opacity: 1;
-  transition: opacity 600ms cubic-bezier(0.2, 0.65, 0.3, 1);
+  transition: opacity 450ms cubic-bezier(0.2, 0.65, 0.3, 1);
 }
 
 .intro.is-visible {
@@ -1989,7 +1989,7 @@ svg {
   gap: 20px;
   font: 400 47px/1 var(--serif);
   letter-spacing: -0.04em;
-  animation: intro-mark-in 750ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: intro-mark-in 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .intro-mark svg {
@@ -2002,11 +2002,11 @@ svg {
 .intro-mark svg path {
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
-  animation: draw-arch 1.6s ease-out forwards;
+  animation: draw-arch 1s ease-out forwards;
 }
 
 .intro-wordmark {
-  animation: intro-wordmark 650ms ease-out both;
+  animation: intro-wordmark 450ms ease-out both;
 }
 
 .intro-wordmark b {
@@ -2018,7 +2018,7 @@ svg {
   font: 400 9px/1.5 var(--sans);
   letter-spacing: 0.12em;
   color: #c8d0be;
-  animation: intro-wordmark 650ms 150ms ease-out both;
+  animation: intro-wordmark 450ms 100ms ease-out both;
 }
 
 .intro-progress {
@@ -2026,7 +2026,7 @@ svg {
   height: 1px;
   background: var(--gold);
   transform-origin: left;
-  animation: intro-progress 2400ms ease-out both;
+  animation: intro-progress 1400ms ease-out both;
 }
 
 @keyframes intro-veil-in {

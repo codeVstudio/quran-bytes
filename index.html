@@ -163,7 +163,7 @@
         <span class="intro-progress" aria-hidden="true"></span>
       </div>
     </div>
-    <!-- Start the 3-second intro immediately, without waiting for fonts or GSAP. -->
+    <!-- Start the intro immediately without waiting for fonts or GSAP. -->
     <script>
       (() => {
         if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -194,8 +194,8 @@
         const fadeTimer = setTimeout(() => {
           document.documentElement.classList.add("is-intro-leaving");
           intro.classList.add("is-leaving");
-        }, 2400);
-        const endTimer = setTimeout(finish, 3000);
+        }, 1400);
+        const endTimer = setTimeout(finish, 1850);
       })();
     </script>
 
