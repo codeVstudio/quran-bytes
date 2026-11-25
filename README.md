@@ -9,10 +9,11 @@ Open `index.html` directly in a modern browser. No install, framework, or build
 step is required. Keep the core files and cover asset together:
 
 ```text
-index.html                Semantic content, inline SVG artwork, CDN links
-style.css                 Responsive layouts, typography, CSS 3D book and arch
-main.js                   Demo controls, local site guide, optional decoration
-assets/quran-cover.webp   Supplied black-and-gold cover, optimized for the web
+index.html                     Semantic content, inline SVG artwork, CDN links
+style.css                      Responsive layouts, typography, CSS 3D book and arch
+main.js                        Demo controls, local site guide, optional decoration
+assets/quran-cover.webp        Supplied black-and-gold cover, optimized for the web
+assets/quran-inner-page.webp   Ornamental calligraphy page revealed when the book opens
 ```
 
 The page, controls, and help guide work without a build step or server. Google
@@ -20,15 +21,14 @@ Fonts use a CDN, with local font fallbacks. GSAP / ScrollTrigger are loaded lazi
 only on motion-enabled desktop layouts; they never block forms or site help.
 If those scripts cannot load, the complete page remains readable and interactive.
 
-## GitHub Pages
+## Deployment (Vercel / GitHub Pages)
 
 Publish the folder containing these files and the `assets` directory using GitHub Pages
 **Settings → Pages → Deploy from a branch**. Asset paths are relative, so the
 page also works under a repository subpath.
 
-The pre-existing Vite/React scaffold is not used by the page. It is retained for
-the Make workspace; its optional `pnpm run build` publishing command also copies
-the standalone classic script into the output.
+A minimal Vite config (`vite.config.mjs`) is included for hosting platforms like
+Vercel (`npm run build`), keeping the standalone `main.js` and assets intact in `dist/`.
 
 ## Before launch
 

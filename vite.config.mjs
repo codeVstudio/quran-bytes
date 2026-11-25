@@ -1,6 +1,4 @@
-import { defineConfig, type Plugin } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from 'vite'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -14,16 +12,7 @@ export default defineConfig(({ mode }) => {
       sourcemap: emitSourcemaps ? 'inline' : false,
       minify: !emitSourcemaps,
     },
-    plugins: [
-      react(),
-      tailwindcss(),
-      standalonePageScript(),
-    ],
-    resolve: {
-      alias: {
-        '@': path.resolve(import.meta.dirname, './src'),
-      },
-    },
+    plugins: [standalonePageScript()],
     server: {
       host: '0.0.0.0',
       port: parseInt(process.env.PORT || '8443'),
@@ -38,16 +27,14 @@ export default defineConfig(({ mode }) => {
 
 // The delivered page uses a classic script for file:// compatibility.
 // Keep it intact in production Vite builds as well.
-function standalonePageScript(): Plugin {
+function standalonePageScript() {
   return {
     name: 'standalone-page-script',
     apply: 'build',
     transformIndexHtml: {
       order: 'pre',
-      handler: (html) => html.replace(
-        '<script defer src="./main.js">',
-        '<script defer vite-ignore src="./main.js">',
-      ),
+      handler: (html) =>
+        html.replace('<script defer src="./main.js">', '<script defer vite-ignore src="./main.js">'),
     },
     generateBundle() {
       this.emitFile({
