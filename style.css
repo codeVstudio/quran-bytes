@@ -1640,6 +1640,12 @@ svg {
   min-height: 50px;
   border-bottom: 1px solid #9da68a;
   margin-top: auto;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.email-form:has(input:focus-visible) {
+  border-bottom-color: var(--green);
+  box-shadow: 0 2px 0 0 var(--green);
 }
 
 .email-form input {
@@ -1649,8 +1655,12 @@ svg {
   border: 0;
   padding: 11px 0;
   font-size: 12px;
-  outline-offset: 3px;
   color: var(--green);
+}
+
+.email-form input:focus,
+.email-form input:focus-visible {
+  outline: none;
 }
 
 .email-form input::placeholder {
@@ -2080,7 +2090,7 @@ svg {
   bottom: calc(var(--help-bottom) + var(--help-vv-bottom, 0px));
   width: min(380px, calc(100% - var(--help-left) - var(--help-right)));
   z-index: 150;
-  font: 400 12px/1.65 var(--sans);
+  font: 400 13.5px/1.6 var(--sans);
   pointer-events: none;
 }
 
@@ -2143,9 +2153,9 @@ svg {
 }
 
 .help-header p {
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 9px;
+  margin-top: 4px;
+  color: #46513f;
+  font-size: 11px;
 }
 
 .help-identity {
@@ -2234,13 +2244,13 @@ svg {
 .help-message-avatar {
   display: grid;
   place-items: center;
-  width: 26px;
-  height: 26px;
-  margin-top: 3px;
-  border: 1px solid #c5ccb7;
+  width: 28px;
+  height: 28px;
+  margin-top: 2px;
+  border: 1px solid #b8c1aa;
   border-radius: 50%;
   color: var(--green);
-  font-size: 8px;
+  font-size: 9.5px;
   font-weight: 700;
   letter-spacing: -0.02em;
   flex-shrink: 0;
@@ -2249,10 +2259,12 @@ svg {
 .help-bubble {
   min-width: 0;
   max-width: 100%;
-  padding: 12px;
-  border: 1px solid #e0e3d7;
+  padding: 13px 14px;
+  border: 1px solid #d9ded0;
   border-radius: 3px 12px 12px;
   background: #fbf9f2;
+  color: var(--ink);
+  font-size: 13.5px;
 }
 
 .help-bubble p {
@@ -2268,18 +2280,18 @@ svg {
 
 .help-welcome-note {
   margin-top: 8px;
-  color: var(--muted);
-  font-size: 11px;
+  color: #3f4a39;
+  font-size: 12.5px;
 }
 
 .help-speaker {
   display: block;
   margin-bottom: 5px;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #4f5b47;
 }
 
 .help-message-you .help-speaker {
@@ -2290,8 +2302,8 @@ svg {
   display: block;
   margin: 10px 0 -3px auto;
   padding: 6px 8px;
-  color: var(--muted);
-  font-size: 8px;
+  color: #46513f;
+  font-size: 10px;
 }
 
 .help-copy:hover {
@@ -2302,7 +2314,8 @@ svg {
   display: inline-block;
   margin-top: 10px;
   color: var(--green);
-  font-size: 11px;
+  font-size: 12.5px;
+  font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -2310,16 +2323,17 @@ svg {
 .help-suggestions {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 7px;
   padding: 0 18px 14px;
 }
 
 .help-suggestions button {
-  padding: 7px 10px;
-  min-height: 32px;
-  border: 1px solid #aeb89f;
-  border-radius: 5px;
-  font-size: 9px;
+  padding: 7px 11px;
+  min-height: 34px;
+  border: 1px solid #9da98d;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
   color: var(--green);
 }
 
@@ -2333,9 +2347,15 @@ svg {
   gap: 8px;
   margin: 0 14px;
   padding: 4px 6px 4px 12px;
-  border: 1px solid #b8c2a7;
+  border: 1px solid #aeb99d;
   border-radius: 10px;
   background: #fbf9f2;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.help-form:focus-within {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(15, 61, 46, 0.16);
 }
 
 .help-form textarea {
@@ -2349,12 +2369,17 @@ svg {
   border: 0;
   background: transparent;
   color: var(--ink);
-  font: 400 12px/1.5 var(--sans);
+  font: 400 13.5px/1.5 var(--sans);
   scrollbar-width: thin;
 }
 
+.help-form textarea:focus,
+.help-form textarea:focus-visible {
+  outline: none;
+}
+
 .help-form textarea::placeholder {
-  color: var(--muted);
+  color: #55614e;
 }
 
 .help-form button {
@@ -2369,8 +2394,8 @@ svg {
 }
 
 .help-form button:disabled {
-  background: #e0e6d5;
-  color: #68765c;
+  background: #dde3d2;
+  color: #4b5a42;
 }
 
 .help-form .icon {
@@ -2380,8 +2405,8 @@ svg {
 
 .help-privacy {
   padding: 10px 18px 13px;
-  color: var(--muted);
-  font-size: 8px;
+  color: #4b5644;
+  font-size: 10px;
   line-height: 1.6;
 }
 
