@@ -1,0 +1,15 @@
+{
+  "short_name": "Quran Bytes",
+  "name": "Quran Bytes — Read. Reflect. Remember.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0F3D2E",
+  "theme_color": "#F6F1E7",
+  "display": "standalone"
+}

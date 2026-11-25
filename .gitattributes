@@ -144,5 +144,6 @@
 *.nc                 filter=lfs diff=lfs merge=lfs -text
 *.mat                filter=lfs diff=lfs merge=lfs -text
 
-# Web assets in assets/ must remain regular Git blobs for Vercel/static builds without Git LFS.
+# Web assets must remain regular Git blobs for Vercel/static builds without Git LFS.
 assets/**            -filter -diff -merge -text
+public/img/**        -filter -diff -merge -text

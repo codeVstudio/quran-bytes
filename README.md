@@ -1,90 +1,79 @@
 # Quran Bytes
 
-A standalone, responsive concept landing page for a free, open-source,
-ad-free Islamic learning platform.
+A modular React 18 + TypeScript + Vite application for a free, open-source, ad-free Islamic learning platform.
 
-## Open locally
+## Tech Stack
 
-Open `index.html` directly in a modern browser. No install, framework, or build
-step is required. Keep the core files and cover asset together:
+- **Framework & Language:** React 18, TypeScript 5, Vite
+- **Routing:** React Router DOM v6 (`BrowserRouter`, route guards, lazy secondary routes)
+- **State & Networking:** Redux Toolkit, Redux Persist, RTK Query (`RtkQueryService`), Axios (`BaseService` / `ApiService`)
+- **Styling & UI:** Tailwind CSS v3 (`@tailwindcss/typography`), editorial CSS design tokens, React Icons
+- **Forms & Validation:** Formik + Yup
+- **Animations & Motion:** GSAP (`ScrollTrigger` desktop 3D book choreography) + Framer Motion support
+- **i18n & Dates:** i18next, `react-i18next`, Day.js
+- **Tooling:** ESLint (`@typescript-eslint`), Prettier
 
-```text
-index.html                     Semantic content, inline SVG artwork, CDN links
-style.css                      Responsive layouts, typography, CSS 3D book and arch
-main.js                        Demo controls, local site guide, optional decoration
-assets/quran-cover.webp        Supplied black-and-gold cover, optimized for the web
-assets/quran-inner-page.webp   Ornamental calligraphy page revealed when the book opens
+## Scripts
+
+```bash
+npm install
+npm run dev       # Start local Vite dev server
+npm run lint      # Run ESLint across src/
+npm run build     # Type-check with tsc and build dist/ via Vite
+npm run preview   # Preview built dist/
 ```
 
-The page, controls, and help guide work without a build step or server. Google
-Fonts use a CDN, with local font fallbacks. GSAP / ScrollTrigger are loaded lazily
-only on motion-enabled desktop layouts; they never block forms or site help.
-If those scripts cannot load, the complete page remains readable and interactive.
+## Project Structure
 
-## Deployment (Vercel / GitHub Pages)
+```text
+├── .eslintrc.cjs
+├── .eslintignore
+├── .prettierrc
+├── .prettierignore
+├── index.html
+├── package.json
+├── postcss.config.cjs
+├── tailwind.config.cjs
+├── tsconfig.json
+├── tsconfig.eslint.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── public/
+│   ├── favicon.svg
+│   ├── manifest.json
+│   ├── data/
+│   └── img/
+└── src/
+    ├── App.tsx
+    ├── main.tsx
+    ├── index.css
+    ├── @types/
+    ├── assets/
+    ├── components/
+    │   ├── layouts/
+    │   ├── route/
+    │   ├── shared/
+    │   ├── template/
+    │   └── ui/
+    ├── configs/
+    ├── constants/
+    ├── locales/
+    ├── services/
+    ├── store/
+    ├── utils/
+    └── views/
+        ├── Views.tsx
+        ├── home/
+        ├── read/
+        ├── memorize/
+        ├── understand/
+        ├── practice/
+        ├── vision/
+        ├── getInvolved/
+        └── pages/
+```
 
-Publish the folder containing these files and the `assets` directory using GitHub Pages
-**Settings → Pages → Deploy from a branch**. Asset paths are relative, so the
-page also works under a repository subpath.
+## Before Launch
 
-A minimal Vite config (`vite.config.mjs`) is included for hosting platforms like
-Vercel (`npm run build`), keeping the standalone `main.js` and assets intact in `dist/`.
-
-## Before launch
-
-- Connect both preview forms to Formspree or a comparable opt-in service.
-  Integration points are marked `TODO` in HTML and JavaScript. They currently
-  validate locally and explicitly report that nothing is sent or saved.
-- Supply the official repository and, only if wanted, donation URLs. No such
-  links are currently displayed; their placeholders are comments.
-- Verify content, translation permissions, source editions, and attribution.
-  The cited Qur’anic text is an excerpt of Al-Muzzammil 73:4; the translation
-  excerpt is attributed to Saheeh International.
-- Replace the working name if appropriate. All unfinished product features are
-  marked **Planned**, and interfaces are labeled **Concept preview**.
-
-## Accessibility and motion
-
-The Arabic reading passages are kept intact and outside the rotating 3D artwork. The hifz
-cover is positioned over an unmodified text node rather than splitting Arabic
-letters or words. Native buttons, keyboard-operable tabs, visible focus, form
-labels, live feedback, and a native modal dialog are provided.
-
-The supplied cover artwork follows the floating book as one image. Its proportions
-and full ornamental border are preserved without cropping or stretching.
-
-Every chapter uses normal vertical document flow, on desktop and mobile.
-There is no scroll pinning, wheel interception, hidden chapter sequence, smooth
-scroll override, pointer tilt, magnetic-button delay, or time-based scrub lag.
-Optional decorative transforms follow scroll progress directly. The floating
-book pauses off-screen, and the native browser cursor is used throughout.
-On desktop, the cover opens around its right-hand spine before the book fades
-into the reading section, without pausing or smoothing the page’s scrolling.
-After the intro, the hero headline reveals line by line using lightweight CSS
-transforms. A fine-line crescent and a few small SVG stars decorate only the
-hero; there are no particle effects or continuous celestial animations.
-
-The CSS-driven intro fades in and out over 3 seconds, with no skip control, and
-does not wait for fonts or animation scripts. Page controls become interactive
-when it finishes. With
-`prefers-reduced-motion: reduce`, the intro and decorative motion are disabled,
-and animation libraries are not requested.
-
-Browser scroll restoration is disabled at startup and stale URL fragments are
-cleared, so a refresh starts at the hero rather than restoring an old section.
-Normal section links and scrolling remain available after the intro.
-
-## Site-help guide
-
-The lower-right chat button opens a small, keyboard-accessible site guide. It
-answers common questions about the planned features, sources, free access,
-launch updates, and contributing. It remembers the current conversation topic,
-handles contextual follow-ups, and suggests useful next questions. The multiline
-composer sends on Enter and adds a new line on Shift+Enter. Replies can be copied
-where clipboard access is supported, and the new-conversation button clears the
-current exchange.
-
-Answers are selected locally from a fixed knowledge base; this is
-**not an open-ended AI service or religious adviser**.
-Questions are not sent to a server or persisted, and conversation history is
-bounded in memory. Unknown questions receive an honest explanation of scope.
+- Connect `#updates-form` and `#contribute-form` (marked `TODO`) to your opt-in mailing/submission endpoint via `src/configs/endpoint.config.ts` and `src/views/getInvolved/api/getInvolvedApi.ts`.
+- Verify source editions, translation attributions, and repository URLs.

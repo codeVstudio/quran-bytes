@@ -1,0 +1,22 @@
+{
+  "readExcerpt": {
+    "surahName": "Al-Muzzammil",
+    "reference": "73:4",
+    "arabic": "وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا",
+    "ayahNumberArabic": "٤",
+    "translation": "“…and recite the Qur’an with measured recitation.”",
+    "translator": "Saheeh International"
+  },
+  "practice": {
+    "dua": {
+      "arabic": "اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي وَعَلِّمْنِي مَا يَنْفَعُنِي وَزِدْنِي عِلْمًا",
+      "translation": "“O Allah, benefit me with what You have taught me, teach me what will benefit me, and increase me in knowledge.”",
+      "source": "Sunan Ibn Majah 251 · excerpt"
+    },
+    "hadith": {
+      "arabic": "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+      "translation": "“The best among you are those who learn the Qur’an and teach it.”",
+      "source": "Sahih al-Bukhari 5027"
+    }
+  }
+}

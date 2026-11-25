@@ -1,0 +1,7 @@
+export const APP_NAME = 'Quran Bytes'
+export const APP_TAGLINE = 'Read. Reflect. Remember.'
+export const PERSIST_STORE_NAME = 'quran-bytes-state'
+export const REDIRECT_URL_KEY = 'redirectUrl'
+export const BRAND_CREDIT_NAME = 'codeVstudio'
+export const BRAND_CREDIT_URL = 'https://codevstudio.in'
+export const COPYRIGHT_YEAR = '2026'
