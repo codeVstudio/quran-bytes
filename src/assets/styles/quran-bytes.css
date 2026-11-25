@@ -1753,8 +1753,9 @@ svg {
   background: none;
   border: 0;
   padding: 11px 0;
-  font-size: 13.5px;
-  color: var(--green);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
 }
 
 .email-form input:focus,
@@ -1763,7 +1764,9 @@ svg {
 }
 
 .email-form input::placeholder {
-  color: #46513e;
+  color: var(--ink);
+  font-weight: 600;
+  opacity: 1;
 }
 
 .email-form button {
