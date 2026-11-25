@@ -18,6 +18,11 @@ const CLOSING_STAR_CLASSES = [
   'closing-star-nine',
   'closing-star-ten',
   'closing-star-eleven',
+  'closing-star-twelve',
+  'closing-star-thirteen',
+  'closing-star-fourteen',
+  'closing-star-fifteen',
+  'closing-star-sixteen',
 ]
 
 const updatesSchema = Yup.object({
