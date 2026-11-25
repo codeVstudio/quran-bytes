@@ -88,18 +88,3 @@ Answers are selected locally from a fixed knowledge base; this is
 **not an open-ended AI service or religious adviser**.
 Questions are not sent to a server or persisted, and conversation history is
 bounded in memory. Unknown questions receive an honest explanation of scope.
-
-## Browser verification
-
-Open [`verification/index.html`](verification/index.html) for archived screenshots at
-1440 × 900, 1024 × 768, and 390 × 844. The accompanying
-[`verification/README.md`](verification/README.md) lists the interaction,
-accessibility, fallback, and build checks, along with their limitations.
-These screenshots predate the simplified native-scroll layout and site guide.
-Scroll regression checks are recorded in
-[`verification/native-scroll-report.json`](verification/native-scroll-report.json).
-The latest refresh, intro, and conversational-guide checks are in
-[`verification/startup-chat-report.json`](verification/startup-chat-report.json).
-
-The site, including its cover asset, is also packaged as
-[`verification/quran-bytes-static.zip`](verification/quran-bytes-static.zip).
