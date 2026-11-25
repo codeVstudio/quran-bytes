@@ -63,6 +63,7 @@ export function QuranArchStage() {
     }
 
     document.fonts?.ready.then(sync)
+    document.fonts?.addEventListener?.('loadingdone', sync)
     window.addEventListener('load', sync, { once: true })
     sync()
 
@@ -70,6 +71,7 @@ export function QuranArchStage() {
       window.removeEventListener('resize', sync)
       window.removeEventListener('orientationchange', sync)
       window.removeEventListener('load', sync)
+      document.fonts?.removeEventListener?.('loadingdone', sync)
       ro?.disconnect()
     }
   }, [])

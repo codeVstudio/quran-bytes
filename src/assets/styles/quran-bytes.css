@@ -6,8 +6,8 @@
   --ink: #0d1411;
   --green: #0f3d2e;
   --gold: #c2a15a;
-  --gold-text: #80632b;
-  --muted: #626b58;
+  --gold-text: #6e5320;
+  --muted: #3e4738;
   --line: #d7d4c8;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Manrope", Arial, sans-serif;
@@ -154,8 +154,8 @@ svg {
 }
 
 .label {
-  font: 600 9px/1.6 var(--sans);
-  letter-spacing: 0.15em;
+  font: 600 11px/1.55 var(--sans);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -274,7 +274,7 @@ svg {
   display: flex;
   gap: 34px;
   align-items: center;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 500;
 }
 
@@ -474,9 +474,9 @@ svg {
 }
 
 .hero-description {
-  font-size: 13px;
-  line-height: 1.9;
-  color: #555c51;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #2c342b;
   margin-top: 33px;
 }
 
@@ -486,7 +486,7 @@ svg {
   justify-content: space-between;
   gap: 28px;
   padding: 12px 0 10px;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
   border-bottom: 1px solid #9aa28c;
   text-align: left;
@@ -785,13 +785,13 @@ svg {
   align-items: center;
   gap: 13px;
   color: var(--green);
-  font-size: 9px;
+  font-size: 11px;
   margin-bottom: 26px;
 }
 
 .planned-inline {
-  color: var(--muted);
-  font-size: 7px;
+  color: #444e3d;
+  font-size: 9.5px;
   padding-left: 12px;
   border-left: 1px solid var(--line);
 }
@@ -807,9 +807,9 @@ svg {
 }
 
 .chapter-description {
-  max-width: 335px;
-  font-size: 13px;
-  color: #5f6758;
+  max-width: 350px;
+  font-size: 14px;
+  color: #2d352c;
   line-height: 1.85;
   margin-top: 29px;
 }
@@ -850,8 +850,8 @@ svg {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  font-size: 8px;
-  letter-spacing: 0.12em;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
   padding-bottom: 14px;
   border-bottom: 1px solid #c8ceba;
   color: var(--green);
@@ -862,8 +862,8 @@ svg {
 }
 
 .concept-tag {
-  font-size: 7px;
-  letter-spacing: 0.1em;
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
   white-space: nowrap;
 }
 
@@ -921,8 +921,8 @@ svg {
 
 .source-label {
   display: block;
-  font: 400 9px/1.8 var(--sans);
-  color: #626b55;
+  font: 500 11.5px/1.75 var(--sans);
+  color: #3c4536;
   margin-top: 13px;
   letter-spacing: 0.01em;
 }
@@ -966,8 +966,8 @@ svg {
 }
 
 .recitation-info>.label {
-  font-size: 7px;
-  letter-spacing: 0.1em;
+  font-size: 10px;
+  letter-spacing: 0.08em;
 }
 
 .waveform {
@@ -1015,11 +1015,12 @@ svg {
 }
 
 .speed-control {
-  font-size: 11px;
+  font-size: 12.5px;
+  font-weight: 600;
   min-width: 40px;
   min-height: 40px;
   padding: 10px 8px;
-  color: #56634b;
+  color: #2f3a29;
 }
 
 .translation-toggle {
@@ -1037,9 +1038,9 @@ svg {
 
 .concept-footnote {
   margin-top: 16px;
-  font-size: 8px;
-  letter-spacing: 0.02em;
-  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.015em;
+  color: #3c4536;
   text-align: center;
 }
 
@@ -1061,8 +1062,8 @@ svg {
 }
 
 .practice-prompt {
-  font-size: 8px;
-  color: #616d52;
+  font-size: 10.5px;
+  color: #34422c;
   display: block;
   margin-bottom: 20px;
 }
@@ -1080,13 +1081,13 @@ svg {
   background: #e4e6d7;
   border: 1px solid #a2af90;
   border-bottom: 2px solid #879b73;
-  color: #415836;
+  color: #263b1e;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  font: 600 7px/1 var(--sans);
-  letter-spacing: 0.08em;
+  gap: 6px;
+  font: 600 9.5px/1 var(--sans);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 0;
   z-index: 2;
@@ -1103,7 +1104,8 @@ svg {
 
 .small-text-button {
   padding: 8px 12px;
-  font-size: 8px;
+  font-size: 11px;
+  font-weight: 500;
   color: var(--green);
   margin-top: 13px;
   text-decoration: underline;
@@ -1121,12 +1123,15 @@ svg {
 }
 
 .repeat-panel .label {
-  font-size: 6px;
+  font-size: 9.5px;
+  color: #2f3a29;
 }
 
 .repeat-panel p {
-  font-size: 10px;
+  font-size: 12.5px;
+  font-weight: 500;
   margin-top: 4px;
+  color: var(--ink);
 }
 
 .repeat-dots {
@@ -1163,7 +1168,8 @@ svg {
 }
 
 .revision-line>.label {
-  font-size: 6px;
+  font-size: 9.5px;
+  color: #2f3a29;
 }
 
 .revision-line>div {
@@ -1172,8 +1178,9 @@ svg {
   position: relative;
   margin-top: 11px;
   padding-top: 10px;
-  font-size: 7px;
-  color: var(--muted);
+  font-size: 10.5px;
+  font-weight: 500;
+  color: #3c4536;
   border-top: 1px solid #bdc6ac;
 }
 
@@ -1191,6 +1198,11 @@ svg {
   top: -13px;
   left: 50%;
   background: var(--ivory);
+}
+
+.revision-line .is-current {
+  color: var(--green);
+  font-weight: 600;
 }
 
 .revision-line .is-current::before {
@@ -1214,8 +1226,9 @@ svg {
   position: relative;
   min-height: 40px;
   padding: 10px 4px;
-  color: var(--muted);
-  font-size: 9px;
+  color: #3e4738;
+  font-size: 11.5px;
+  font-weight: 500;
 }
 
 .concept-tabs button[aria-selected="true"] {
@@ -1247,7 +1260,8 @@ svg {
 }
 
 .meaning-panel>.label {
-  font-size: 6px;
+  font-size: 9.5px;
+  color: #2f3a29;
 }
 
 .meaning-translation {
@@ -1267,13 +1281,14 @@ svg {
 
 .note-number {
   color: var(--gold-text);
-  font-size: 7px;
+  font-size: 10px;
+  font-weight: 600;
 }
 
 .meaning-note p {
-  font-size: 8px;
-  color: var(--muted);
-  line-height: 1.8;
+  font-size: 11.5px;
+  color: #3a4334;
+  line-height: 1.75;
 }
 
 .source-panel dl {
@@ -1282,12 +1297,12 @@ svg {
 
 .source-panel dl>div {
   display: grid;
-  grid-template-columns: 83px 1fr;
+  grid-template-columns: 92px 1fr;
   gap: 12px;
   border-bottom: 1px solid #d1d7c2;
   padding: 10px 0;
-  font-size: 9px;
-  line-height: 1.7;
+  font-size: 11.5px;
+  line-height: 1.65;
 }
 
 .source-panel dl>div:first-child {
@@ -1295,8 +1310,9 @@ svg {
 }
 
 .source-panel dt {
-  color: var(--muted);
-  font-size: 8px;
+  color: #3c4536;
+  font-size: 10.5px;
+  font-weight: 600;
 }
 
 .source-panel dd {
@@ -1304,7 +1320,7 @@ svg {
 }
 
 .source-panel .muted {
-  font-size: 8px;
+  font-size: 10.5px;
 }
 
 /* Daily companion */
@@ -1325,8 +1341,9 @@ svg {
 }
 
 .daily-heading .label {
-  font-size: 7px;
-  line-height: 1.8;
+  font-size: 10px;
+  line-height: 1.75;
+  color: #2f3a29;
 }
 
 .daily-panel {
@@ -1335,7 +1352,8 @@ svg {
 }
 
 .daily-panel>.label {
-  font-size: 7px;
+  font-size: 10px;
+  color: #2f3a29;
 }
 
 .daily-arabic {
@@ -1355,7 +1373,7 @@ svg {
 
 .concept-practice .source-label {
   margin-top: 14px;
-  font-size: 9px;
+  font-size: 11.5px;
 }
 
 .concept-practice .concept-footnote {
@@ -1416,9 +1434,9 @@ svg {
 }
 
 .mission-intro>p {
-  font-size: 11px;
-  color: #b7c7ad;
-  line-height: 1.9;
+  font-size: 13px;
+  color: #dce6d5;
+  line-height: 1.85;
   margin-top: 31px;
 }
 
@@ -1450,8 +1468,9 @@ svg {
 }
 
 .principle-number {
-  font-size: 8px;
-  color: #b1ba8a;
+  font-size: 11px;
+  font-weight: 600;
+  color: #d0d9ad;
   padding-top: 9px;
 }
 
@@ -1461,10 +1480,10 @@ svg {
 }
 
 .mission-principles p {
-  font-size: 12px;
-  color: #c1cdb8;
-  line-height: 1.85;
-  max-width: 340px;
+  font-size: 13.5px;
+  color: #e2eadc;
+  line-height: 1.8;
+  max-width: 360px;
   margin-top: 10px;
 }
 
@@ -1628,9 +1647,9 @@ svg {
 }
 
 .closing-actions>div>p:not(.form-note) {
-  font-size: 12px;
-  color: #606b53;
-  line-height: 1.9;
+  font-size: 13.5px;
+  color: #2e372a;
+  line-height: 1.85;
   margin-bottom: 24px;
 }
 
@@ -1654,7 +1673,7 @@ svg {
   background: none;
   border: 0;
   padding: 11px 0;
-  font-size: 12px;
+  font-size: 13.5px;
   color: var(--green);
 }
 
@@ -1664,7 +1683,7 @@ svg {
 }
 
 .email-form input::placeholder {
-  color: var(--muted);
+  color: #46513e;
 }
 
 .email-form button {
@@ -1680,12 +1699,12 @@ svg {
 }
 
 .form-note {
-  font-size: 9px;
-  color: var(--muted);
-  line-height: 1.8;
+  font-size: 11.5px;
+  color: #3e4738;
+  line-height: 1.75;
   margin-top: 12px;
-  min-height: 25px;
-  max-width: 400px;
+  min-height: 42px;
+  max-width: 420px;
 }
 
 .form-note.is-feedback {
@@ -1697,7 +1716,9 @@ svg {
   min-height: 50px;
   padding: 11px 0;
   width: 100%;
-  font-size: 10px;
+  font-size: clamp(10.5px, 1.2vw, 12px);
+  gap: 14px;
+  white-space: nowrap;
 }
 
 .site-footer {
@@ -1719,9 +1740,9 @@ svg {
 }
 
 .site-footer>p {
-  font-size: 10px;
-  line-height: 1.8;
-  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+  color: #3b4436;
   text-align: center;
 }
 
@@ -1743,7 +1764,8 @@ svg {
   align-items: center;
   gap: 13px;
   justify-self: end;
-  font-size: 7px;
+  font-size: 10.5px;
+  color: #1f2b22;
   white-space: nowrap;
 }
 
@@ -2015,9 +2037,9 @@ svg {
 }
 
 .intro-caption {
-  font: 400 9px/1.5 var(--sans);
+  font: 400 11px/1.5 var(--sans);
   letter-spacing: 0.12em;
-  color: #c8d0be;
+  color: #dce3d3;
   animation: intro-wordmark 450ms 100ms ease-out both;
 }
 
@@ -2650,7 +2672,7 @@ svg {
 
   .hero-description {
     max-width: 280px;
-    font-size: 12px;
+    font-size: 12.5px;
   }
 
   .visual-stage {
@@ -2811,7 +2833,7 @@ svg {
   }
 
   .mission-intro>p {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .mission-principles h3 {
@@ -2819,7 +2841,7 @@ svg {
   }
 
   .mission-principles p {
-    font-size: 11px;
+    font-size: 12.5px;
   }
 
   .mission-principles li {
@@ -2827,7 +2849,7 @@ svg {
   }
 
   .mission-bottom {
-    font-size: 5px;
+    font-size: 9px;
   }
 
   .closing {
@@ -2846,11 +2868,16 @@ svg {
   }
 
   .closing-aside p {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .closing-actions h3 {
     font-size: clamp(26px, 4.4vw, 35px);
+  }
+
+  .contribute-block .text-action {
+    font-size: 11px;
+    gap: 12px;
   }
 
   .contribute-block {
@@ -2866,7 +2893,7 @@ svg {
   }
 
   .site-footer>p {
-    font-size: 9px;
+    font-size: 11.5px;
   }
 }
 
@@ -3039,7 +3066,7 @@ svg {
   }
 
   .hero-description {
-    font-size: 12px;
+    font-size: 12.5px;
     line-height: 1.75;
     margin-top: 12px;
     max-width: 280px;
@@ -3155,7 +3182,7 @@ svg {
   }
 
   .chapter-kicker {
-    font-size: 8px;
+    font-size: 10.5px;
     gap: 10px;
     margin-bottom: 20px;
   }
@@ -3175,9 +3202,9 @@ svg {
   }
 
   .chapter-description {
-    font-size: 12px;
+    font-size: 13.5px;
     margin-top: 20px;
-    max-width: 305px;
+    max-width: 320px;
     line-height: 1.85;
   }
 
@@ -3205,13 +3232,13 @@ svg {
   }
 
   .concept-heading {
-    font-size: 7px;
+    font-size: 9.5px;
     gap: 6px;
     letter-spacing: 0.06em;
   }
 
   .concept-tag {
-    font-size: 6px;
+    font-size: 8.5px;
   }
 
   .concept .verse {
@@ -3233,7 +3260,7 @@ svg {
   }
 
   .source-label {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .reading-tools {
@@ -3259,15 +3286,15 @@ svg {
   }
 
   .recitation-info>.label {
-    font-size: 6px;
+    font-size: 9.5px;
   }
 
   .concept-footnote {
-    font-size: 8px;
+    font-size: 10.5px;
   }
 
   .speed-control {
-    font-size: 10px;
+    font-size: 11.5px;
     padding-left: 4px;
     padding-right: 4px;
   }
@@ -3287,11 +3314,11 @@ svg {
   }
 
   .repeat-panel .label {
-    font-size: 5px;
+    font-size: 9px;
   }
 
   .repeat-panel p {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .repeat-dots {
@@ -3304,7 +3331,7 @@ svg {
   }
 
   .revision-line>div {
-    font-size: 6px;
+    font-size: 10px;
   }
 
   .concept-tabs {
@@ -3312,7 +3339,7 @@ svg {
   }
 
   .concept-tabs button {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .meaning-translation {
@@ -3320,7 +3347,7 @@ svg {
   }
 
   .meaning-note p {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .meaning-panel,
@@ -3343,7 +3370,7 @@ svg {
   }
 
   .daily-heading .label {
-    font-size: 6px;
+    font-size: 9.5px;
   }
 
   .mission {
@@ -3374,7 +3401,7 @@ svg {
 
   .mission-intro>p {
     margin-top: 25px;
-    font-size: 11px;
+    font-size: 12.5px;
   }
 
   .mission-seal {
@@ -3393,13 +3420,13 @@ svg {
   }
 
   .mission-principles p {
-    font-size: 12px;
-    max-width: 265px;
+    font-size: 13px;
+    max-width: 290px;
     margin-top: 9px;
   }
 
   .principle-number {
-    font-size: 7px;
+    font-size: 10.5px;
   }
 
   .mission-bottom {
@@ -3499,7 +3526,7 @@ svg {
   }
 
   .closing-actions>div>p:not(.form-note) {
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 0;
   }
 
@@ -3512,11 +3539,11 @@ svg {
   }
 
   .form-note {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .contribute-block .text-action {
-    font-size: 11px;
+    font-size: 12px;
     margin-top: 21px;
   }
 
@@ -3534,13 +3561,13 @@ svg {
     grid-row: 2;
     grid-column: 1 / -1;
     text-align: left;
-    font-size: 10px;
+    font-size: 11.5px;
   }
 
   .back-top {
     grid-column: 2;
     grid-row: 1;
-    font-size: 9px;
+    font-size: 10.5px;
   }
 
   .contribute-dialog {
