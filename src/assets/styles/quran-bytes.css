@@ -1561,11 +1561,51 @@ svg {
 }
 
 .closing-star-six {
-  left: 44%;
-  top: 132px;
+  left: 48%;
+  top: 138px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.52;
+}
+
+.closing-star-seven {
+  left: 56%;
+  top: 178px;
+  width: 15px;
+  height: 15px;
+  opacity: 0.65;
+}
+
+.closing-star-eight {
+  left: 65%;
+  top: 258px;
+  width: 12px;
+  height: 12px;
+  opacity: 0.58;
+}
+
+.closing-star-nine {
+  left: 57%;
+  top: 332px;
   width: 9px;
   height: 9px;
-  opacity: 0.4;
+  opacity: 0.5;
+}
+
+.closing-star-ten {
+  left: 73%;
+  top: 212px;
+  width: 13px;
+  height: 13px;
+  opacity: 0.6;
+}
+
+.closing-star-eleven {
+  left: 69%;
+  top: 344px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.52;
 }
 
 .closing .section-topline {
@@ -3473,7 +3513,12 @@ svg {
 
   .closing-star-four,
   .closing-star-five,
-  .closing-star-six {
+  .closing-star-six,
+  .closing-star-seven,
+  .closing-star-eight,
+  .closing-star-nine,
+  .closing-star-ten,
+  .closing-star-eleven {
     display: none;
   }
 
