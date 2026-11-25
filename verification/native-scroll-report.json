@@ -1,0 +1,262 @@
+{
+  "viewports": {
+    "390": {
+      "width": 390,
+      "height": 844,
+      "docWidth": 375,
+      "clientWidth": 375,
+      "scrollBehavior": "auto",
+      "pins": 0,
+      "clutter": false,
+      "intro": {
+        "start": 37.39999999990687,
+        "end": 1537.6000000000931,
+        "duration": 1500.2000000001863
+      },
+      "introVisible": false,
+      "helpReady": true,
+      "chapters": [
+        {
+          "id": "read",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        },
+        {
+          "id": "memorize",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        },
+        {
+          "id": "understand",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        },
+        {
+          "id": "practice",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        }
+      ],
+      "scrubs": [],
+      "coverLoaded": true,
+      "helpBounds": {
+        "left": 20,
+        "right": 355,
+        "top": 236,
+        "bottom": 756,
+        "clientWidth": 375,
+        "rightMargin": 20,
+        "open": true
+      },
+      "helpResponseMs": 7.59
+    },
+    "1024": {
+      "width": 1024,
+      "height": 768,
+      "docWidth": 1009,
+      "clientWidth": 1009,
+      "scrollBehavior": "auto",
+      "pins": 0,
+      "clutter": false,
+      "intro": {
+        "start": 41.5,
+        "end": 1541.7999999998137,
+        "duration": 1500.2999999998137
+      },
+      "introVisible": false,
+      "helpReady": true,
+      "chapters": [
+        {
+          "id": "read",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        },
+        {
+          "id": "memorize",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        },
+        {
+          "id": "understand",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        },
+        {
+          "id": "practice",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        }
+      ],
+      "scrubs": [
+        {
+          "pin": false,
+          "scrub": true
+        },
+        {
+          "pin": false,
+          "scrub": true
+        },
+        {
+          "pin": false,
+          "scrub": true
+        },
+        {
+          "pin": false,
+          "scrub": true
+        },
+        {
+          "pin": false,
+          "scrub": true
+        }
+      ],
+      "coverLoaded": true,
+      "helpBounds": {
+        "left": 629,
+        "right": 989,
+        "top": 160,
+        "bottom": 680,
+        "clientWidth": 1009,
+        "rightMargin": 20,
+        "open": true
+      },
+      "helpResponseMs": 8.97
+    },
+    "1440": {
+      "width": 1440,
+      "height": 900,
+      "docWidth": 1425,
+      "clientWidth": 1425,
+      "scrollBehavior": "auto",
+      "pins": 0,
+      "clutter": false,
+      "intro": {
+        "start": 117.60000000009313,
+        "end": 1617.6000000000931,
+        "duration": 1500
+      },
+      "introVisible": false,
+      "helpReady": true,
+      "chapters": [
+        {
+          "id": "read",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        },
+        {
+          "id": "memorize",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        },
+        {
+          "id": "understand",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        },
+        {
+          "id": "practice",
+          "position": "relative",
+          "visibility": "visible",
+          "inert": false
+        }
+      ],
+      "scrubs": [
+        {
+          "pin": false,
+          "scrub": true
+        },
+        {
+          "pin": false,
+          "scrub": true
+        },
+        {
+          "pin": false,
+          "scrub": true
+        },
+        {
+          "pin": false,
+          "scrub": true
+        },
+        {
+          "pin": false,
+          "scrub": true
+        }
+      ],
+      "coverLoaded": true,
+      "helpBounds": {
+        "left": 1045,
+        "right": 1405,
+        "top": 292,
+        "bottom": 812,
+        "clientWidth": 1425,
+        "rightMargin": 20,
+        "open": true
+      },
+      "helpResponseMs": 10.91
+    }
+  },
+  "interactions": {
+    "helpFree": {
+      "answer": "Site guideQuran Bytes is intended to be free, open-source, and ad-free. The project’s mission is learning without ads or paywalls.Read the vision ↗",
+      "responseMs": 10.91
+    },
+    "helpSources": {
+      "answer": "Site guideThe reading preview uses an excerpt from Surah Al-Muzzammil 73:4, with an English translation excerpt attributed to Saheeh International. Open “Source notes” in the Understand section for the details. Tafsir and additional languages are planned.Explore meaning and sources ↗",
+      "responseMs": 6.72
+    },
+    "helpRulings": {
+      "answer": "Site guideI’m a guide to this website, not a scholar or a source of religious rulings. Please take personal religious questions to a qualified scholar. I can help you find the learning previews and their references.Explore the learning previews ↗",
+      "responseMs": 6.49
+    },
+    "read": {
+      "pressed": "true",
+      "status": "Visual preview only — no audio is playing."
+    },
+    "memorize": {
+      "revealed": true,
+      "nodes": 1
+    }
+  },
+  "errors": [],
+  "nativeScroll": {
+    "early": {
+      "y": 1300,
+      "transform": "matrix(1, 0, 0, 1, -381.6, 0)"
+    },
+    "settled": {
+      "y": 1300,
+      "transform": "matrix(1, 0, 0, 1, -381.6, 0)"
+    }
+  },
+  "reducedMotion": {
+    "intro": "none",
+    "float": "none",
+    "pins": 0,
+    "gsap": "undefined",
+    "help": true
+  },
+  "fallback": {
+    "helpWorks": true,
+    "gsap": "undefined",
+    "reply": "Site guideQuran Bytes is a free, open-source Islamic learning project. Planned features include Qur’an reading, hifz practice, translations and sources, hadith, duas, and structured learning. This page lets you try a few concept interfaces.Explore the previews ↗"
+  },
+  "directFile": {
+    "protocol": "file:",
+    "helpReady": true,
+    "coverLoaded": true,
+    "pins": 0
+  },
+  "guideNetworkCalls": [],
+  "checkedAt": "2026-11-25T05:59:55.693Z",
+  "helpMarginsVerified": true
+}

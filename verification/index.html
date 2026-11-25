@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quran Bytes — browser verification</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 40px 5vw 70px;
+        background: #f6f1e7;
+        color: #0d1411;
+        font:
+          14px/1.7 Arial,
+          sans-serif;
+      }
+      a {
+        color: #0f3d2e;
+        text-underline-offset: 4px;
+      }
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid #80632b;
+        outline-offset: 5px;
+      }
+      header {
+        border-bottom: 1px solid #c4cbb8;
+        padding-bottom: 28px;
+        margin-bottom: 30px;
+      }
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #626b58;
+      }
+      h1 {
+        font:
+          400 clamp(42px, 6vw, 80px)/1.1 Georgia,
+          serif;
+        letter-spacing: -0.05em;
+        margin: 16px 0;
+      }
+      header p {
+        max-width: 700px;
+        color: #626b58;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 24px;
+        font-size: 12px;
+      }
+      details {
+        border-bottom: 1px solid #c4cbb8;
+        padding: 22px 0;
+      }
+      summary {
+        cursor: pointer;
+        font:
+          400 28px/1.3 Georgia,
+          serif;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        margin: 30px 0;
+      }
+      .mobile-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      figure {
+        margin: 0;
+      }
+      figure a {
+        display: block;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid #d7d4c8;
+      }
+      figcaption {
+        font-size: 11px;
+        margin-top: 9px;
+        color: #626b58;
+      }
+      .limits {
+        max-width: 850px;
+        margin-top: 40px;
+        color: #626b58;
+        font-size: 12px;
+      }
+      @media (max-width: 650px) {
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+        body {
+          padding-top: 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="eyebrow">Quran Bytes / Verification archive</span>
+      <h1>Every chapter.<br />Three viewports.</h1>
+      <p>
+        Real browser captures, not mockups. Desktop chapters share a pinned viewport; mobile
+        chapters and their concept previews are captured separately as they scroll naturally.
+      </p>
+      <nav aria-label="Verification links">
+        <a href="../index.html">Back to the site</a
+        ><a href="report.json">Measurements & interaction results</a
+        ><a href="README.md">Checks & limitations</a>
+      </nav>
+    </header>
+    <details open>
+      <summary>1440 × 900 — Desktop</summary>
+      <div class="gallery">
+        <figure>
+          <a href="screenshots/1440/00-hero.png"
+            ><img
+              src="screenshots/1440/00-hero.png"
+              width="1440"
+              height="900"
+              alt="Desktop hero with oversized serif headlines and a floating geometric green book."
+              loading="lazy"
+          /></a>
+          <figcaption>00 / Hero</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1440/01-read.png"
+            ><img
+              src="screenshots/1440/01-read.png"
+              width="1440"
+              height="900"
+              alt="Read chapter with Arabic verse, translation, and visual recitation controls in the arch."
+              loading="lazy"
+          /></a>
+          <figcaption>01 / Read</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1440/02-memorize.png"
+            ><img
+              src="screenshots/1440/02-memorize.png"
+              width="1440"
+              height="900"
+              alt="Memorize chapter with hidden-word practice and revision orbits."
+              loading="lazy"
+          /></a>
+          <figcaption>02 / Memorize</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1440/03-understand.png"
+            ><img
+              src="screenshots/1440/03-understand.png"
+              width="1440"
+              height="900"
+              alt="Understand chapter with layered arch, translation, and source tabs."
+              loading="lazy"
+          /></a>
+          <figcaption>03 / Understand</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1440/04-practice.png"
+            ><img
+              src="screenshots/1440/04-practice.png"
+              width="1440"
+              height="900"
+              alt="Practice chapter with a referenced dua and daily companion interface."
+              loading="lazy"
+          /></a>
+          <figcaption>04 / Practice</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1440/05-vision.png"
+            ><img
+              src="screenshots/1440/05-vision.png"
+              width="1440"
+              height="900"
+              alt="Deep green mission section with four numbered principles."
+              loading="lazy"
+          /></a>
+          <figcaption>05 / Mission</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1440/06-get-involved.png"
+            ><img
+              src="screenshots/1440/06-get-involved.png"
+              width="1440"
+              height="900"
+              alt="Closing section with launch updates and contribution actions."
+              loading="lazy"
+          /></a>
+          <figcaption>06 / Get involved</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1440/07-contribution-dialog.png"
+            ><img
+              src="screenshots/1440/07-contribution-dialog.png"
+              width="1440"
+              height="900"
+              alt="Contribution concept form displaying selected design skills and explicit no-data-sent feedback."
+              loading="lazy"
+          /></a>
+          <figcaption>Interaction / Contribution dialog (synthetic test details)</figcaption>
+        </figure>
+      </div>
+    </details>
+    <details>
+      <summary>1024 × 768 — Compact desktop</summary>
+      <div class="gallery">
+        <figure>
+          <a href="screenshots/1024/00-hero.png"
+            ><img
+              src="screenshots/1024/00-hero.png"
+              width="1024"
+              height="768"
+              alt="Hero at 1024 pixels wide."
+              loading="lazy"
+          /></a>
+          <figcaption>00 / Hero</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1024/01-read.png"
+            ><img
+              src="screenshots/1024/01-read.png"
+              width="1024"
+              height="768"
+              alt="Read chapter at 1024 pixels wide."
+              loading="lazy"
+          /></a>
+          <figcaption>01 / Read</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1024/02-memorize.png"
+            ><img
+              src="screenshots/1024/02-memorize.png"
+              width="1024"
+              height="768"
+              alt="Memorize chapter at 1024 pixels wide."
+              loading="lazy"
+          /></a>
+          <figcaption>02 / Memorize</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1024/03-understand.png"
+            ><img
+              src="screenshots/1024/03-understand.png"
+              width="1024"
+              height="768"
+              alt="Understand chapter at 1024 pixels wide."
+              loading="lazy"
+          /></a>
+          <figcaption>03 / Understand</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1024/04-practice.png"
+            ><img
+              src="screenshots/1024/04-practice.png"
+              width="1024"
+              height="768"
+              alt="Practice chapter at 1024 pixels wide."
+              loading="lazy"
+          /></a>
+          <figcaption>04 / Practice</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1024/05-vision.png"
+            ><img
+              src="screenshots/1024/05-vision.png"
+              width="1024"
+              height="768"
+              alt="Mission section at 1024 pixels wide."
+              loading="lazy"
+          /></a>
+          <figcaption>05 / Mission</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/1024/06-get-involved.png"
+            ><img
+              src="screenshots/1024/06-get-involved.png"
+              width="1024"
+              height="768"
+              alt="Closing section at 1024 pixels wide."
+              loading="lazy"
+          /></a>
+          <figcaption>06 / Get involved</figcaption>
+        </figure>
+      </div>
+    </details>
+    <details>
+      <summary>390 × 844 — Mobile</summary>
+      <div class="gallery mobile-gallery">
+        <figure>
+          <a href="screenshots/390/00-hero.png"
+            ><img
+              src="screenshots/390/00-hero.png"
+              width="390"
+              height="844"
+              alt="Mobile hero with the floating book below the headline."
+              loading="lazy"
+          /></a>
+          <figcaption>00 / Hero</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/01-read.png"
+            ><img
+              src="screenshots/390/01-read.png"
+              width="390"
+              height="844"
+              alt="Mobile Read chapter text."
+              loading="lazy"
+          /></a>
+          <figcaption>01 / Read</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/01-read-concept.png"
+            ><img
+              src="screenshots/390/01-read-concept.png"
+              width="390"
+              height="844"
+              alt="Mobile reading concept preview."
+              loading="lazy"
+          /></a>
+          <figcaption>01 / Reading concept</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/02-memorize.png"
+            ><img
+              src="screenshots/390/02-memorize.png"
+              width="390"
+              height="844"
+              alt="Mobile Memorize chapter text."
+              loading="lazy"
+          /></a>
+          <figcaption>02 / Memorize</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/02-memorize-concept.png"
+            ><img
+              src="screenshots/390/02-memorize-concept.png"
+              width="390"
+              height="844"
+              alt="Mobile hidden-word practice concept."
+              loading="lazy"
+          /></a>
+          <figcaption>02 / Hifz concept</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/03-understand.png"
+            ><img
+              src="screenshots/390/03-understand.png"
+              width="390"
+              height="844"
+              alt="Mobile Understand chapter text."
+              loading="lazy"
+          /></a>
+          <figcaption>03 / Understand</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/03-understand-concept.png"
+            ><img
+              src="screenshots/390/03-understand-concept.png"
+              width="390"
+              height="844"
+              alt="Mobile translation and source concept."
+              loading="lazy"
+          /></a>
+          <figcaption>03 / Meaning concept</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/04-practice.png"
+            ><img
+              src="screenshots/390/04-practice.png"
+              width="390"
+              height="844"
+              alt="Mobile Practice chapter text."
+              loading="lazy"
+          /></a>
+          <figcaption>04 / Practice</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/04-practice-concept.png"
+            ><img
+              src="screenshots/390/04-practice-concept.png"
+              width="390"
+              height="844"
+              alt="Mobile dua and hadith concept."
+              loading="lazy"
+          /></a>
+          <figcaption>04 / Daily companion concept</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/05-vision.png"
+            ><img
+              src="screenshots/390/05-vision.png"
+              width="390"
+              height="844"
+              alt="Mobile mission section."
+              loading="lazy"
+          /></a>
+          <figcaption>05 / Mission</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/390/06-get-involved.png"
+            ><img
+              src="screenshots/390/06-get-involved.png"
+              width="390"
+              height="844"
+              alt="Mobile closing section."
+              loading="lazy"
+          /></a>
+          <figcaption>06 / Get involved</figcaption>
+        </figure>
+      </div>
+    </details>
+    <details>
+      <summary>Fallbacks — Reduced motion & direct file</summary>
+      <div class="gallery">
+        <figure>
+          <a href="screenshots/reduced-motion.png"
+            ><img
+              src="screenshots/reduced-motion.png"
+              width="1440"
+              height="900"
+              alt="Unpinned static Memorize chapter with reduced motion enabled."
+              loading="lazy"
+          /></a>
+          <figcaption>Reduced motion / Normal document flow</figcaption>
+        </figure>
+        <figure>
+          <a href="screenshots/direct-file.png"
+            ><img
+              src="screenshots/direct-file.png"
+              width="1440"
+              height="900"
+              alt="Standalone page opened directly over the file protocol."
+              loading="lazy"
+          /></a>
+          <figcaption>Direct file / No web server</figcaption>
+        </figure>
+      </div>
+    </details>
+    <p class="limits">
+      Verified in Chromium. Safari/Firefox and sustained frame-rate profiling were not performed.
+      Forms are deliberately front-end-only; recitation is a labeled visual demonstration, not
+      audio. The screenshot archive is separate from the three-file site and is never loaded by the
+      landing page.
+    </p>
+  </body>
+</html>
