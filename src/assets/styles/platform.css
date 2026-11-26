@@ -1,9 +1,10 @@
 /* Quran Bytes — Interactive Platform & Destination Routes Styles */
 
 .main-nav {
-  gap: 18px;
+  gap: 10px;
 }
 
+.main-nav a.nav-explore-btn::after,
 .main-nav a.nav-login-btn::after,
 .main-nav a.nav-user-pill::after {
   display: none;
@@ -16,10 +17,30 @@
   height: var(--header-scrolled-h);
 }
 
-.nav-sub-link {
-  font-size: 12.5px;
-  font-weight: 500;
-  color: var(--ink);
+.main-nav .nav-explore-btn,
+.main-nav a.nav-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border: 1px solid rgba(15, 61, 46, 0.24);
+  border-radius: 6px;
+  background: rgba(15, 61, 46, 0.08);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 0.25s,
+    color 0.25s,
+    border-color 0.25s;
+}
+
+.main-nav .nav-explore-btn:hover,
+.main-nav a.nav-explore-btn:hover,
+.main-nav a.nav-explore-btn.is-active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #ffffff;
 }
 
 .nav-account {
@@ -73,6 +94,12 @@
 }
 
 @media (max-width: 520px) {
+  .main-nav {
+    gap: 8px;
+  }
+
+  .main-nav .nav-explore-btn,
+  .main-nav a.nav-explore-btn,
   .main-nav .nav-login-btn,
   .main-nav a.nav-login-btn {
     padding: 6px 13px;
@@ -84,6 +111,35 @@
     padding: 5px 10px;
     font-size: 11px;
   }
+}
+
+@media (max-width: 359px) {
+  .main-nav {
+    gap: 6px;
+  }
+
+  .main-nav .nav-explore-btn,
+  .main-nav a.nav-explore-btn,
+  .main-nav .nav-login-btn,
+  .main-nav a.nav-login-btn {
+    padding: 5px 9px;
+    font-size: 10px;
+  }
+}
+
+.site-header.is-dark .nav-explore-btn,
+.site-header.is-dark a.nav-explore-btn {
+  background: rgba(246, 241, 231, 0.12);
+  border-color: rgba(246, 241, 231, 0.34);
+  color: var(--ivory);
+}
+
+.site-header.is-dark .nav-explore-btn:hover,
+.site-header.is-dark a.nav-explore-btn:hover,
+.site-header.is-dark a.nav-explore-btn.is-active {
+  background: var(--ivory);
+  border-color: var(--ivory);
+  color: var(--green);
 }
 
 .site-header.is-dark .nav-login-btn {

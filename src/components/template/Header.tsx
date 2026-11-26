@@ -115,11 +115,16 @@ export function Header() {
       </Link>
 
       <nav className="main-nav" aria-label="Main navigation">
-        {!isHome && location.pathname !== '/get-started' && (
-          <Link className="nav-sub-link" to="/get-started">
-            Explore
-          </Link>
-        )}
+        <Link
+          className={cn(
+            'nav-explore-btn',
+            location.pathname === '/get-started' && 'is-active',
+          )}
+          to="/get-started"
+          aria-current={location.pathname === '/get-started' ? 'page' : undefined}
+        >
+          Explore
+        </Link>
         {authenticated ? (
           <div className="nav-account">
             <Link className="nav-user-pill" to="/get-started" title={`Signed in as ${user.email}`}>
