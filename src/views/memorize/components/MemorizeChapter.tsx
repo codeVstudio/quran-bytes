@@ -41,10 +41,10 @@ export function MemorizeChapter() {
     const parent = container.getBoundingClientRect()
 
     setMaskRect({
-      left: rect.left - parent.left - 3,
-      top: rect.top - parent.top - 1,
-      width: rect.width + 6,
-      height: rect.height + 2,
+      left: rect.left - parent.left - 5,
+      top: rect.top - parent.top - 2,
+      width: rect.width + 10,
+      height: rect.height + 4,
     })
   }, [])
 
@@ -151,7 +151,22 @@ export function MemorizeChapter() {
                   : undefined
               }
             >
-              Reveal <span aria-hidden="true">+</span>
+              <span className="word-mask-pill">
+                <svg
+                  className="word-mask-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="2.75" />
+                </svg>
+                <span>Reveal</span>
+              </span>
             </button>
           </div>
           <p className="source-label">Surah Al-Muzzammil 73:4 · excerpt</p>
@@ -163,7 +178,22 @@ export function MemorizeChapter() {
             hidden={!revealed}
             onClick={handleHide}
           >
-            Hide the word again <span aria-hidden="true">↗</span>
+            <svg
+              className="hide-word-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m3 3 18 18" />
+              <path d="M10.58 10.58a2 2 0 0 0 2.84 2.84" />
+              <path d="M9.88 5.09A10.4 10.4 0 0 1 12 4.88c6.5 0 10 7.12 10 7.12a17.6 17.6 0 0 1-3.17 4.35" />
+              <path d="M6.61 6.61A17.7 17.7 0 0 0 2 12s3.5 7.12 10 7.12c1.73 0 3.31-.42 4.7-1.12" />
+            </svg>
+            <span>Hide word</span>
           </button>
         </div>
         <div className="repeat-panel">

@@ -1158,38 +1158,105 @@ svg {
 .word-mask {
   position: absolute;
   inset: auto;
-  background: #e4e6d7;
-  border: 1px solid #a2af90;
-  border-bottom: 2px solid #879b73;
-  color: #263b1e;
+  background: linear-gradient(150deg, rgba(251, 249, 243, 0.96), rgba(235, 240, 227, 0.94));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 61, 46, 0.16);
+  border-radius: 14px;
+  box-shadow:
+    0 6px 18px rgba(15, 61, 46, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  color: var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  font: 600 9.5px/1 var(--sans);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0;
+  padding: 6px;
   z-index: 2;
+  transition:
+    transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
 }
 
 .word-mask:hover {
-  background: #d7deca;
+  transform: translateY(-1.5px);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.99), rgba(232, 240, 224, 0.97));
+  border-color: rgba(15, 61, 46, 0.34);
+  box-shadow:
+    0 10px 24px rgba(15, 61, 46, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
-.word-mask span {
-  font-weight: 400;
-  font-size: 15px;
+.word-mask:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.word-mask-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(15, 61, 46, 0.08);
+  border: 1px solid rgba(15, 61, 46, 0.12);
+  font: 600 11px/1 var(--sans);
+  letter-spacing: 0.015em;
+  color: var(--green);
+  white-space: nowrap;
+  transition:
+    background 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.word-mask:hover .word-mask-pill {
+  background: var(--green);
+  border-color: var(--green);
+  color: #ffffff;
+}
+
+.word-mask-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
 }
 
 .small-text-button {
-  padding: 8px 12px;
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 14px;
   margin-top: 13px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 61, 46, 0.18);
+  background: rgba(15, 61, 46, 0.05);
+  font: 600 11.5px/1.2 var(--sans);
+  color: var(--green);
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.small-text-button:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: #ffffff;
+}
+
+.small-text-button[hidden],
+.word-mask[hidden] {
+  display: none;
+}
+
+.hide-word-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
 }
 
 .repeat-panel {
@@ -2991,8 +3058,15 @@ svg {
     font-size: clamp(28px, 5.4vw, 40px);
   }
 
-  .word-mask {
-    background: #e0e4d1;
+  .word-mask-pill {
+    padding: 4px 8px;
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .word-mask-icon {
+    width: 11px;
+    height: 11px;
   }
 
   .journey-bottom {
