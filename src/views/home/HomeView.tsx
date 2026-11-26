@@ -8,6 +8,7 @@ import PracticeChapter from '@/views/practice/components/PracticeChapter'
 import ReadChapter from '@/views/read/components/ReadChapter'
 import UnderstandChapter from '@/views/understand/components/UnderstandChapter'
 import VisionSection from '@/views/vision/components/VisionSection'
+import ChapterIndex from './components/ChapterIndex'
 import HeroSection from './components/HeroSection'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -134,6 +135,7 @@ export function HomeView() {
       <main id="main">
         <HeroSection />
         <section className="journey" id="explore" aria-label="Explore the planned learning experience">
+          <ChapterIndex />
           <ReadChapter />
           <MemorizeChapter />
           <UnderstandChapter />
