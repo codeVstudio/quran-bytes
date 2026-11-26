@@ -12,6 +12,16 @@ const SKY_STAR_CLASSES = [
   'sky-star-six',
   'sky-star-seven',
   'sky-star-eight',
+  'sky-star-nine',
+  'sky-star-ten',
+  'sky-star-eleven',
+  'sky-star-twelve',
+  'sky-star-thirteen',
+  'sky-star-fourteen',
+  'sky-star-fifteen',
+  'sky-star-sixteen',
+  'sky-star-seventeen',
+  'sky-star-eighteen',
 ]
 
 export function HeroSection() {

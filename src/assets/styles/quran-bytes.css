@@ -416,7 +416,7 @@ svg {
   top: 73%;
   width: 9px;
   height: 9px;
-  opacity: 0.48;
+  opacity: 0.58;
 }
 
 .sky-star-four {
@@ -424,7 +424,7 @@ svg {
   top: 130px;
   width: 8px;
   height: 8px;
-  opacity: 0.5;
+  opacity: 0.58;
 }
 
 .sky-star-five {
@@ -432,7 +432,7 @@ svg {
   top: 18%;
   width: 10px;
   height: 10px;
-  opacity: 0.52;
+  opacity: 0.6;
 }
 
 .sky-star-six {
@@ -440,7 +440,7 @@ svg {
   top: 86%;
   width: 12px;
   height: 12px;
-  opacity: 0.56;
+  opacity: 0.64;
 }
 
 .sky-star-seven {
@@ -448,7 +448,7 @@ svg {
   top: 27%;
   width: 7px;
   height: 7px;
-  opacity: 0.48;
+  opacity: 0.58;
 }
 
 .sky-star-eight {
@@ -456,7 +456,87 @@ svg {
   top: 54%;
   width: 8px;
   height: 8px;
-  opacity: 0.5;
+  opacity: 0.6;
+}
+
+.sky-star-nine {
+  left: 33.5%;
+  top: 25.5%;
+  width: 12px;
+  height: 12px;
+  opacity: 0.68;
+}
+
+.sky-star-ten {
+  left: 41%;
+  top: 33%;
+  width: 9px;
+  height: 9px;
+  opacity: 0.6;
+}
+
+.sky-star-eleven {
+  left: 44.5%;
+  top: 45%;
+  width: 14px;
+  height: 14px;
+  opacity: 0.72;
+}
+
+.sky-star-twelve {
+  left: 58.5%;
+  top: 14.5%;
+  width: 11px;
+  height: 11px;
+  opacity: 0.64;
+}
+
+.sky-star-thirteen {
+  left: 64.5%;
+  top: 23%;
+  width: 9px;
+  height: 9px;
+  opacity: 0.6;
+}
+
+.sky-star-fourteen {
+  left: 34.5%;
+  top: 76.5%;
+  width: 13px;
+  height: 13px;
+  opacity: 0.7;
+}
+
+.sky-star-fifteen {
+  left: 46.5%;
+  top: 84%;
+  width: 10px;
+  height: 10px;
+  opacity: 0.62;
+}
+
+.sky-star-sixteen {
+  left: 28.5%;
+  top: 86.5%;
+  width: 8px;
+  height: 8px;
+  opacity: 0.58;
+}
+
+.sky-star-seventeen {
+  right: 5.5%;
+  top: 69%;
+  width: 12px;
+  height: 12px;
+  opacity: 0.68;
+}
+
+.sky-star-eighteen {
+  right: 4.5%;
+  top: 17%;
+  width: 10px;
+  height: 10px;
+  opacity: 0.64;
 }
 
 .hero h1 {
@@ -2768,6 +2848,27 @@ svg {
     height: 500px;
   }
 
+  .sky-star-ten,
+  .sky-star-eleven,
+  .sky-star-sixteen {
+    display: none;
+  }
+
+  .sky-star-nine {
+    left: 62%;
+    top: 19%;
+  }
+
+  .sky-star-fourteen {
+    left: 38%;
+    top: 84%;
+  }
+
+  .sky-star-fifteen {
+    left: 49%;
+    top: 89%;
+  }
+
   .stage-caption {
     font-size: 5px;
   }
@@ -3085,8 +3186,42 @@ svg {
   }
 
   .sky-star-six,
-  .sky-star-eight {
+  .sky-star-eight,
+  .sky-star-ten,
+  .sky-star-eleven,
+  .sky-star-twelve,
+  .sky-star-thirteen,
+  .sky-star-fifteen,
+  .sky-star-sixteen,
+  .sky-star-eighteen {
     display: none;
+  }
+
+  .sky-star-nine {
+    left: auto;
+    right: 16%;
+    top: 145px;
+    width: 10px;
+    height: 10px;
+    opacity: 0.65;
+  }
+
+  .sky-star-fourteen {
+    left: auto;
+    right: 25%;
+    top: clamp(670px, 82svh, 760px);
+    width: 11px;
+    height: 11px;
+    opacity: 0.68;
+  }
+
+  .sky-star-seventeen {
+    left: auto;
+    right: 11%;
+    top: 235px;
+    width: 9px;
+    height: 9px;
+    opacity: 0.62;
   }
 
   :root {
