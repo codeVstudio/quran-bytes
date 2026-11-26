@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="format-detection" content="telephone=no" />
-    <!-- Disable browser scroll restoration before it can restore an old position. -->
+    <!-- Disable browser scroll restoration before it can restore an old position on home refresh. -->
     <script>
       (() => {
         if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
-        if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const isHome = location.pathname === '/' || location.pathname === '/index.html'
+        if (isHome && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
           document.documentElement.classList.add('is-intro-active')
         }
         const scrollToTop = () => {
@@ -48,7 +49,7 @@
     <meta name="theme-color" content="#F6F1E7" />
     <meta
       name="description"
-      content="A quieter space to read, reflect, and remember. Quran Bytes is a free, open-source, ad-free Islamic learning platform in development."
+      content="A quieter space to read, reflect, and remember. Quran Bytes is a free, open-source, ad-free Islamic learning platform."
     />
     <title>Quran Bytes — Read. Reflect. Remember.</title>
     <link rel="manifest" href="/manifest.json" />

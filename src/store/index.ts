@@ -18,7 +18,7 @@ const persistConfig = {
   key: PERSIST_STORE_NAME,
   keyPrefix: '',
   storage,
-  whitelist: ['auth', 'theme'],
+  whitelist: ['auth', 'accounts', 'theme', 'study'],
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer())

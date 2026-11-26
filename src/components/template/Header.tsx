@@ -1,11 +1,17 @@
 import { useEffect, useRef, useState } from 'react'
-import SvgIcon from '@/components/shared/SvgIcon'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import useAuth from '@/utils/hooks/useAuth'
 import { cn } from '@/utils/classNames'
 
 export function Header() {
   const headerRef = useRef<HTMLElement>(null)
+  const location = useLocation()
+  const navigate = useNavigate()
+  const { authenticated, user, signOut } = useAuth()
   const [scrolled, setScrolled] = useState(false)
   const [dark, setDark] = useState(false)
+
+  const isHome = location.pathname === '/'
 
   useEffect(() => {
     const header = headerRef.current
@@ -18,9 +24,10 @@ export function Header() {
 
     const update = () => {
       const y = window.scrollY
-      setScrolled(y > 25)
+      setScrolled(!isHome || y > 25)
       setDark(
-        missionEnd > missionStart &&
+        isHome &&
+          missionEnd > missionStart &&
           y + headerHeight >= missionStart &&
           y + headerHeight < missionEnd,
       )
@@ -28,7 +35,7 @@ export function Header() {
     }
 
     const measure = () => {
-      const mission = document.getElementById('vision')
+      const mission = isHome ? document.getElementById('vision') : null
       const scrolledCss = parseFloat(
         getComputedStyle(header).getPropertyValue('--header-scrolled-h'),
       )
@@ -72,15 +79,30 @@ export function Header() {
       window.removeEventListener('load', measure)
       ro?.disconnect()
     }
-  }, [])
+  }, [isHome])
 
   return (
     <header
       ref={headerRef}
-      className={cn('site-header', scrolled && 'is-scrolled', dark && 'is-dark')}
+      className={cn(
+        'site-header',
+        (scrolled || !isHome) && 'is-scrolled',
+        dark && 'is-dark',
+        !isHome && 'is-subpage-header',
+      )}
       id="site-header"
     >
-      <a className="brand" href="#top" aria-label="Quran Bytes, back to top">
+      <Link
+        className="brand"
+        to="/"
+        aria-label="Quran Bytes, home"
+        onClick={(e) => {
+          if (isHome) {
+            e.preventDefault()
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }
+        }}
+      >
         <svg className="brand-mark" viewBox="0 0 32 43" fill="none" aria-hidden="true">
           <path d="M3 40V18C3 11 10 7 16 2c6 5 13 9 13 16v22Z" />
           <path d="M9 34V20c0-4 4-7 7-10 3 3 7 6 7 10v14" />
@@ -90,13 +112,36 @@ export function Header() {
           quran <i>bytes</i>
           <span className="brand-period">.</span>
         </span>
-      </a>
+      </Link>
+
       <nav className="main-nav" aria-label="Main navigation">
-        <a href="#vision">Vision</a>
-        <a href="#explore">Explore</a>
-        <a className="nav-join" href="#get-involved">
-          Get involved <SvgIcon name="icon-arrow-up" />
-        </a>
+        {!isHome && location.pathname !== '/get-started' && (
+          <Link className="nav-sub-link" to="/get-started">
+            Explore
+          </Link>
+        )}
+        {authenticated ? (
+          <div className="nav-account">
+            <Link className="nav-user-pill" to="/get-started" title={`Signed in as ${user.email}`}>
+              <span className="nav-user-dot" aria-hidden="true" />
+              <span>{user.name.split(' ')[0] || 'Account'}</span>
+            </Link>
+            <button
+              type="button"
+              className="nav-login-btn"
+              onClick={() => {
+                signOut()
+                if (location.pathname === '/login') navigate('/')
+              }}
+            >
+              Sign out
+            </button>
+          </div>
+        ) : (
+          <Link className="nav-login-btn" to="/login">
+            Login
+          </Link>
+        )}
       </nav>
     </header>
   )

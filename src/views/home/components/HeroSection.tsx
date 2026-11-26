@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import SvgIcon from '@/components/shared/SvgIcon'
 import { usePrefersReducedMotion } from '@/utils/hooks/useMotion'
 
@@ -90,10 +91,10 @@ export function HeroSection() {
           A free, open-source space for Qur’an,
           <br className="desktop-break" /> Sunnah, and lifelong learning.
         </p>
-        <a className="text-action magnetic hero-cta" href="#get-involved">
-          <span>Be part of the beginning</span>
-          <SvgIcon name="icon-arrow-up" />
-        </a>
+        <Link className="hero-cta hero-start-btn" to="/get-started">
+          <span>Get Started</span>
+          <SvgIcon name="icon-arrow" />
+        </Link>
       </div>
     </section>
   )
