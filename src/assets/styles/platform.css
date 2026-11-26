@@ -947,7 +947,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100svh;
-  padding: clamp(76px, 8.6svh, 92px) var(--pad-right) 0 var(--pad-left);
+  padding: clamp(74px, 9svh, 96px) var(--pad-right) 0 var(--pad-left);
 }
 
 .auth-shell .auth-container {
@@ -959,33 +959,33 @@
 }
 
 .auth-shell .subpage-breadcrumb {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .auth-shell .subpage-kicker {
   color: #6a4f1f;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .auth-card {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 468px;
+  max-width: 492px;
   margin: auto;
-  padding: clamp(22px, 3vh, 30px) clamp(24px, 3.6vw, 36px);
+  padding: clamp(28px, 4.2vh, 42px) clamp(28px, 4.2vw, 44px);
   border: 1px solid #9da78f;
-  border-radius: 14px;
+  border-radius: 16px;
   background: linear-gradient(180deg, #fbf8ef 0%, var(--ivory) 100%);
-  box-shadow: 0 18px 46px rgba(13, 20, 17, 0.08);
+  box-shadow: 0 20px 50px rgba(13, 20, 17, 0.08);
 }
 
 .auth-card-star {
   position: absolute;
   right: -18px;
   top: -18px;
-  width: 88px;
-  height: 88px;
+  width: 92px;
+  height: 92px;
   fill: none;
   stroke: var(--gold);
   stroke-width: 0.7;
@@ -994,7 +994,7 @@
 }
 
 .auth-title {
-  font: 400 clamp(32px, 4vw, 44px)/1.03 var(--serif);
+  font: 400 clamp(34px, 4vw, 44px)/1.05 var(--serif);
   letter-spacing: -0.035em;
   color: var(--ink);
 }
@@ -1004,23 +1004,23 @@
 }
 
 .auth-subtitle {
-  margin-top: 8px;
-  margin-bottom: 18px;
+  margin-top: 10px;
+  margin-bottom: 24px;
   font-size: 13.5px;
-  line-height: 1.55;
+  line-height: 1.65;
   color: #1f2821;
 }
 
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 
 .auth-field {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
 }
 
 .auth-field .label {
@@ -1045,9 +1045,9 @@
 .auth-field input {
   width: 100%;
   min-width: 0;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border: 1px solid #9ea890;
-  border-radius: 8px;
+  border-radius: 9px;
   background: #ffffff;
   color: var(--ink);
   font-size: 14px;
@@ -1073,7 +1073,7 @@
 }
 
 .auth-password-wrap input {
-  padding-right: 60px;
+  padding-right: 64px;
 }
 
 .auth-eye-btn {
@@ -1104,7 +1104,7 @@
   justify-content: center;
   gap: 10px;
   margin-top: 6px;
-  padding: 13px 20px;
+  padding: 14px 22px;
 }
 
 .auth-success-box {
@@ -1116,7 +1116,7 @@
 }
 
 .auth-footer-link {
-  margin-top: 16px;
+  margin-top: 22px;
   text-align: center;
   font-size: 13px;
   color: #1f2821;
@@ -1129,49 +1129,72 @@
   text-underline-offset: 3px;
 }
 
-.auth-storage-note {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid #cdd3c2;
-  font-size: 11.5px;
-  line-height: 1.55;
-  color: #293328;
-}
-
 .auth-shell .site-footer {
   padding: 16px 0 max(18px, env(safe-area-inset-bottom));
 }
 
-.auth-shell .site-footer > p,
+.auth-shell .site-footer>p,
 .auth-shell .back-top {
   color: #1f2821;
 }
 
 @media (min-width: 1000px) and (max-height: 740px) {
   .auth-shell {
-    padding-top: 72px;
+    padding-top: 70px;
   }
 
   .auth-card {
-    padding: 18px 28px;
+    padding: 24px 36px;
   }
 
   .auth-subtitle {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
   }
 
   .auth-form {
-    gap: 11px;
+    gap: 15px;
   }
 
-  .auth-storage-note {
-    margin-top: 10px;
-    padding-top: 10px;
+  .auth-footer-link {
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 1000px) and (max-height: 700px) {
+  .auth-shell {
+    padding-top: 64px;
+  }
+
+  .auth-shell .subpage-breadcrumb {
+    margin-bottom: 6px;
+  }
+
+  .auth-card {
+    padding: 18px 34px;
+  }
+
+  .auth-subtitle {
+    margin-bottom: 14px;
+  }
+
+  .auth-form {
+    gap: 12px;
+  }
+
+  .auth-footer-link {
+    margin-top: 14px;
+  }
+
+  .auth-shell .site-footer {
+    padding: 10px 0 12px;
   }
 }
 
 /* Ensure touch inputs avoid iOS Safari auto-zoom (>= 16px) */
-@media (pointer: coarse), (any-pointer: coarse), (max-width: 999px) {
+@media (pointer: coarse),
+(any-pointer: coarse),
+(max-width: 999px) {
+
   .editorial-select,
   .editorial-search,
   .auth-field input,

@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '@/components/template/Footer'
-import useAuth from '@/utils/hooks/useAuth'
 
 export interface AuthShellProps {
   kicker: string
@@ -11,8 +10,6 @@ export interface AuthShellProps {
 }
 
 export function AuthShell({ kicker, title, subtitle, children }: AuthShellProps) {
-  const { hasBackend } = useAuth()
-
   return (
     <main id="main" className="subpage-shell auth-shell">
       <div className="subpage-container auth-container">
@@ -33,13 +30,6 @@ export function AuthShell({ kicker, title, subtitle, children }: AuthShellProps)
           <p className="auth-subtitle">{subtitle}</p>
 
           {children}
-
-          {!hasBackend && (
-            <p className="auth-storage-note">
-              Browser-local authentication with Web Crypto SHA-256 hashing is active until a
-              remote backend endpoint is configured.
-            </p>
-          )}
         </section>
 
         <Footer />
