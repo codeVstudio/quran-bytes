@@ -1,5 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
-import { APP_NAME, BRAND_CREDIT_URL, COPYRIGHT_YEAR } from '@/constants/app.constant'
+import {
+  APP_NAME,
+  BRAND_CREDIT_NAME,
+  BRAND_CREDIT_URL,
+  COPYRIGHT_YEAR,
+} from '@/constants/app.constant'
 
 interface FooterLinkItem {
   label: string
@@ -94,7 +99,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            CodeVstudio
+            {BRAND_CREDIT_NAME}
           </a>
           .
         </p>
