@@ -16,6 +16,24 @@ const publicRoutes: Routes = [
     authority: [],
   },
   {
+    key: 'about',
+    path: '/about',
+    component: lazy(() => import('@/views/about/AboutView')),
+    authority: [],
+  },
+  {
+    key: 'vision',
+    path: '/vision',
+    component: lazy(() => import('@/views/vision/VisionView')),
+    authority: [],
+  },
+  {
+    key: 'contact',
+    path: '/contact',
+    component: lazy(() => import('@/views/contact/ContactView')),
+    authority: [],
+  },
+  {
     key: 'readQuran',
     path: '/read',
     component: lazy(() => import('@/views/read/ReadQuranView')),

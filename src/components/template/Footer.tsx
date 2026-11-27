@@ -30,9 +30,9 @@ const FOOTER_COLUMNS: FooterColumn[] = [
     title: 'Discover',
     links: [
       { label: 'AI Islamic Assistant', to: '/assistant' },
-      { label: 'About Us', to: '/#explore' },
-      { label: 'Our Vision', to: '/#vision' },
-      { label: 'Contact', to: '/#get-involved' },
+      { label: 'About Us', to: '/about' },
+      { label: 'Our Vision', to: '/vision' },
+      { label: 'Contact', to: '/contact' },
     ],
   },
   {
