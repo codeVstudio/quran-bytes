@@ -24,19 +24,28 @@ export function Footer() {
       >
         quran <i>bytes</i>.
       </Link>
-      <p>
-        Built by{' '}
-        <a
-          className="footer-credit-link"
-          href={BRAND_CREDIT_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {BRAND_CREDIT_NAME}
-        </a>
-        <br />
-        Copyright &copy; {COPYRIGHT_YEAR}
-      </p>
+      <div className="site-footer-meta">
+        <p>
+          Built by{' '}
+          <a
+            className="footer-credit-link"
+            href={BRAND_CREDIT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {BRAND_CREDIT_NAME}
+          </a>{' '}
+          · Copyright &copy; {COPYRIGHT_YEAR}
+        </p>
+        <nav className="footer-legal-nav" aria-label="Legal">
+          <span className="footer-legal-label">Legal</span>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <span aria-hidden="true">·</span>
+          <Link to="/terms-of-service">Terms of Service</Link>
+          <span aria-hidden="true">·</span>
+          <Link to="/cookie-policy">Cookie Policy</Link>
+        </nav>
+      </div>
       <button
         type="button"
         className="back-top label"

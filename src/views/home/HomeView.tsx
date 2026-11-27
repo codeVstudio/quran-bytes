@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import CookieBanner from '@/components/shared/CookieBanner'
 import QuranArchStage from '@/components/shared/QuranArchStage'
 import GetInvolvedSection from '@/views/getInvolved/components/GetInvolvedSection'
 import MemorizeChapter from '@/views/memorize/components/MemorizeChapter'
@@ -144,6 +145,7 @@ export function HomeView() {
         <VisionSection />
         <GetInvolvedSection />
       </main>
+      <CookieBanner />
     </>
   )
 }

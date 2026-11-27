@@ -58,6 +58,24 @@ const publicRoutes: Routes = [
     authority: [],
   },
   {
+    key: 'privacyPolicy',
+    path: '/privacy-policy',
+    component: lazy(() => import('@/views/legal/PrivacyPolicyView')),
+    authority: [],
+  },
+  {
+    key: 'termsOfService',
+    path: '/terms-of-service',
+    component: lazy(() => import('@/views/legal/TermsOfServiceView')),
+    authority: [],
+  },
+  {
+    key: 'cookiePolicy',
+    path: '/cookie-policy',
+    component: lazy(() => import('@/views/legal/CookiePolicyView')),
+    authority: [],
+  },
+  {
     key: 'welcome',
     path: '/welcome',
     component: lazy(() => import('@/views/pages/Welcome/Welcome')),
