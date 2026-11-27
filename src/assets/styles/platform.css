@@ -23,10 +23,10 @@
   align-items: center;
   justify-content: center;
   padding: 8px 18px;
-  border: 1px solid rgba(15, 61, 46, 0.24);
+  border: 1px solid var(--green);
   border-radius: 6px;
-  background: rgba(15, 61, 46, 0.08);
-  color: var(--green);
+  background: var(--green);
+  color: #ffffff;
   font-size: 12px;
   font-weight: 600;
   transition:
@@ -36,10 +36,15 @@
 }
 
 .main-nav .nav-explore-btn:hover,
-.main-nav a.nav-explore-btn:hover,
+.main-nav a.nav-explore-btn:hover {
+  background: #17523e;
+  border-color: #17523e;
+  color: #ffffff;
+}
+
 .main-nav a.nav-explore-btn.is-active {
   background: var(--green);
-  border-color: var(--green);
+  border-color: #0b2e22;
   color: #ffffff;
 }
 
