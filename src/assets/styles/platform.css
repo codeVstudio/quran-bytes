@@ -167,6 +167,18 @@
   background: var(--gold);
 }
 
+/* Desktop hero heading descender clearance between "Reflect." and "Remember." */
+@media (min-width: 1000px) {
+  #hero-title .hero-italic {
+    padding-bottom: 0.26em;
+    margin-bottom: -0.26em;
+  }
+
+  #hero-title .text-line:nth-child(3) {
+    margin-top: clamp(12px, 1.15vw, 18px);
+  }
+}
+
 /* Primary Hero CTA button */
 .hero-start-btn {
   display: inline-flex;
@@ -1639,6 +1651,7 @@
 }
 
 @media (min-width: 720px) and (max-width: 999px) {
+
   .site-footer,
   .closing .site-footer {
     display: block;
@@ -1667,6 +1680,7 @@
 }
 
 @media (max-width: 599px) {
+
   .site-footer,
   .closing .site-footer {
     display: block;
