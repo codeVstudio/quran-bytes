@@ -12,6 +12,7 @@ interface ExplorePath {
   description: string
   cta: string
   icon: JSX.Element
+  ornament: JSX.Element
 }
 
 const EXPLORE_PATHS: ExplorePath[] = [
@@ -34,6 +35,14 @@ const EXPLORE_PATHS: ExplorePath[] = [
         <path d="M14 7.5v16" stroke="currentColor" strokeWidth="1.3" />
       </svg>
     ),
+    ornament: (
+      <svg className="explore-card-ornament" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M11 43V22c0-7.5 6.2-11.5 13-17 6.8 5.5 13 9.5 13 17v21Z" />
+        <path d="M16.5 43V23.5c0-4.8 3.6-7.8 7.5-11 3.9 3.2 7.5 6.2 7.5 11V43" />
+        <path d="M24 5v7.5M14 27h20" />
+        <path d="m24 1 2 2-2 2-2-2Z" />
+      </svg>
+    ),
   },
   {
     id: 'translation',
@@ -54,6 +63,14 @@ const EXPLORE_PATHS: ExplorePath[] = [
         <path d="M7.5 10h5.5M7.5 14h4M13.5 17h7" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
       </svg>
     ),
+    ornament: (
+      <svg className="explore-card-ornament" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="18" />
+        <rect x="11.5" y="11.5" width="25" height="25" rx="2" transform="rotate(45 24 24)" />
+        <rect x="15" y="15" width="18" height="18" rx="1.5" />
+        <path d="M19.5 21.5h9M19.5 24.5h9M21.5 27.5h5" strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
     id: 'dua-hadith',
@@ -71,6 +88,17 @@ const EXPLORE_PATHS: ExplorePath[] = [
           strokeWidth="1.5"
         />
         <circle cx="20" cy="19" r="5.5" stroke="currentColor" strokeWidth="1.3" />
+      </svg>
+    ),
+    ornament: (
+      <svg className="explore-card-ornament" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="17.5" strokeDasharray="2 3" />
+        <path
+          d="M31.5 29.5A10.5 10.5 0 1 1 20.5 13a8.2 8.2 0 0 0 11 16.5Z"
+          strokeLinejoin="round"
+        />
+        <path d="m32 13 1 3 3 1-3 1-1 3-1-3-3-1 3-1Z" />
+        <path d="m14 33 .7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7Z" />
       </svg>
     ),
   },
@@ -95,6 +123,18 @@ const EXPLORE_PATHS: ExplorePath[] = [
           stroke="currentColor"
           strokeWidth="1.15"
         />
+      </svg>
+    ),
+    ornament: (
+      <svg className="explore-card-ornament" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="18" />
+        <circle cx="24" cy="24" r="12" />
+        <path d="M24 4v5M24 39v5M4 24h5M39 24h5" strokeLinecap="round" />
+        <path
+          d="m24 14 2.4 7.6L34 24l-7.6 2.4L24 34l-2.4-7.6L14 24l7.6-2.4Z"
+          strokeLinejoin="round"
+        />
+        <circle cx="24" cy="24" r="2.2" />
       </svg>
     ),
   },
@@ -132,9 +172,7 @@ export function GetStartedView() {
               transition={{ duration: 0.4, delay: reducedMotion ? 0 : idx * 0.06 }}
             >
               <Link to={item.to} className="explore-card">
-                <svg className="explore-card-ornament" viewBox="0 0 40 40" aria-hidden="true">
-                  <use href="#icon-star" />
-                </svg>
+                {item.ornament}
                 <div className="explore-card-top">
                   <span className="explore-card-icon">{item.icon}</span>
                   <span className="label explore-card-kicker">{item.kicker}</span>

@@ -340,14 +340,14 @@
 
 .explore-card-ornament {
   position: absolute;
-  right: -18px;
-  top: -18px;
-  width: 96px;
-  height: 96px;
+  right: -10px;
+  top: -10px;
+  width: 88px;
+  height: 88px;
   fill: none;
-  stroke: var(--gold);
-  stroke-width: 0.7;
-  opacity: 0.22;
+  stroke: var(--gold-text);
+  stroke-width: 1.05;
+  opacity: 0.25;
   pointer-events: none;
 }
 
@@ -480,10 +480,10 @@
   }
 
   .get-started-shell .explore-card-ornament {
-    width: 84px;
-    height: 84px;
-    right: -16px;
-    top: -16px;
+    width: 80px;
+    height: 80px;
+    right: -8px;
+    top: -8px;
   }
 
   .get-started-shell .explore-card-icon {
