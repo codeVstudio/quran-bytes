@@ -1677,15 +1677,16 @@
 /* First-Time Cookie Consent Banner (Home) */
 .cookie-banner {
   position: fixed;
-  left: max(20px, env(safe-area-inset-left));
-  bottom: max(20px, env(safe-area-inset-bottom));
+  left: auto;
+  right: max(90px, calc(env(safe-area-inset-right) + 88px));
+  bottom: max(18px, env(safe-area-inset-bottom));
   z-index: 160;
-  width: min(720px, calc(100vw - 114px));
+  width: min(560px, calc(100vw - 380px));
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 15px 18px;
+  gap: 16px;
+  padding: 14px 18px;
   border: 1px solid #aeb89f;
   border-radius: 14px;
   background: rgba(251, 248, 239, 0.96);
@@ -1767,20 +1768,27 @@
   color: var(--green);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
   .cookie-banner {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
-    left: max(12px, env(safe-area-inset-left));
-    right: max(12px, env(safe-area-inset-right));
-    bottom: max(12px, env(safe-area-inset-bottom));
-    width: auto;
-    padding: 14px 15px;
+    gap: 10px;
+    width: min(400px, calc(100vw - 112px));
+    padding: 13px 15px;
   }
 
   .cookie-banner-actions {
     justify-content: flex-end;
+  }
+}
+
+@media (max-width: 720px) {
+  .cookie-banner {
+    left: auto;
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+    width: min(360px, calc(100vw - 24px));
+    padding: 13px 14px;
   }
 }
 
