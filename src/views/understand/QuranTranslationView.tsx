@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import type { QuranSearchHit, SurahMeta, SurahWithTranslation } from '@/@types/quran'
-import Footer from '@/components/template/Footer'
+import SubpageLayout from '@/components/layouts/SubpageLayout'
 import { TRANSLATION_EDITIONS } from '@/data/quranFallback'
 import {
   fetchAllSurahs,
@@ -116,9 +116,8 @@ export function QuranTranslationView() {
   )
 
   return (
-    <main id="main" className="subpage-shell translation-shell">
-      <div className="subpage-container">
-        <div className="subpage-topbar">
+    <SubpageLayout shellClassName="translation-shell">
+      <div className="subpage-topbar">
           <Link to="/get-started" className="back-link">
             <span aria-hidden="true">←</span> Back to Explore
           </Link>
@@ -322,10 +321,7 @@ export function QuranTranslationView() {
             )}
           </>
         )}
-
-        <Footer />
-      </div>
-    </main>
+    </SubpageLayout>
   )
 }
 

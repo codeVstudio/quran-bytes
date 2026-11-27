@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import type { DuaHadithCategory, DuaHadithTopic } from '@/@types/quran'
-import Footer from '@/components/template/Footer'
+import SubpageLayout from '@/components/layouts/SubpageLayout'
 import { DUA_HADITH_CATALOG } from '@/data/duaHadithCatalog'
 import { useAppDispatch, useAppSelector } from '@/store/hook'
 import { toggleEntryBookmark } from '@/store/slices/base/studySlice'
@@ -75,9 +75,8 @@ export function DuaHadithView() {
   }
 
   return (
-    <main id="main" className="subpage-shell dua-hadith-shell">
-      <div className="subpage-container">
-        <div className="subpage-topbar">
+    <SubpageLayout shellClassName="dua-hadith-shell">
+      <div className="subpage-topbar">
           <Link to="/get-started" className="back-link">
             <span aria-hidden="true">←</span> Back to Explore
           </Link>
@@ -203,10 +202,7 @@ export function DuaHadithView() {
             })}
           </ul>
         )}
-
-        <Footer />
-      </div>
-    </main>
+    </SubpageLayout>
   )
 }
 

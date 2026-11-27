@@ -8,14 +8,14 @@ export interface BlankLayoutProps {
 
 export function BlankLayout({ children }: BlankLayoutProps) {
   return (
-    <>
+    <div className="app-layout">
       <a className="skip-link" href="#main">
         Skip to content
       </a>
       <Header />
       {children}
       <SiteHelpWidget />
-    </>
+    </div>
   )
 }
 

@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from 'react'
 import { Link } from 'react-router-dom'
 import type { AssistantMessage } from '@/@types/quran'
+import SubpageLayout from '@/components/layouts/SubpageLayout'
 import SvgIcon from '@/components/shared/SvgIcon'
-import Footer from '@/components/template/Footer'
 import { resolveAssistantQuery } from './services/assistantEngine'
 
 const STARTER_PROMPTS = [
@@ -94,9 +94,8 @@ export function AssistantView() {
   }
 
   return (
-    <main id="main" className="subpage-shell assistant-shell">
-      <div className="subpage-container">
-        <div className="subpage-topbar">
+    <SubpageLayout shellClassName="assistant-shell">
+      <div className="subpage-topbar">
           <Link to="/get-started" className="back-link">
             <span aria-hidden="true">←</span> Back to Explore
           </Link>
@@ -214,10 +213,7 @@ export function AssistantView() {
             </button>
           </form>
         </section>
-
-        <Footer />
-      </div>
-    </main>
+    </SubpageLayout>
   )
 }
 

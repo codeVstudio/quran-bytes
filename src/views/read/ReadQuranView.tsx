@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import type { SurahMeta, SurahWithTranslation } from '@/@types/quran'
-import Footer from '@/components/template/Footer'
+import SubpageLayout from '@/components/layouts/SubpageLayout'
 import { fetchAllSurahs, fetchSurahAudioUrls, fetchSurahContent } from '@/services/quranApi'
 import { useAppDispatch, useAppSelector } from '@/store/hook'
 import { setLastReadSurah, toggleAyahBookmark } from '@/store/slices/base/studySlice'
@@ -148,9 +148,8 @@ export function ReadQuranView() {
   }, [bookmarkedAyahs, surahData])
 
   return (
-    <main id="main" className={cn('subpage-shell reader-shell', focusMode && 'is-focus-mode')}>
-      <div className="subpage-container">
-        <div className="subpage-topbar">
+    <SubpageLayout shellClassName={cn('reader-shell', focusMode && 'is-focus-mode')}>
+      <div className="subpage-topbar">
           <Link to="/get-started" className="back-link">
             <span aria-hidden="true">←</span> Back to Explore
           </Link>
@@ -367,10 +366,7 @@ export function ReadQuranView() {
             )}
           </>
         )}
-
-        <Footer />
-      </div>
-    </main>
+    </SubpageLayout>
   )
 }
 

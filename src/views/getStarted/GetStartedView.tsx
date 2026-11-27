@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SubpageLayout from '@/components/layouts/SubpageLayout'
 import SvgIcon from '@/components/shared/SvgIcon'
-import Footer from '@/components/template/Footer'
 import { usePrefersReducedMotion } from '@/utils/hooks/useMotion'
 
 interface ExplorePath {
@@ -144,53 +144,49 @@ export function GetStartedView() {
   const reducedMotion = usePrefersReducedMotion()
 
   return (
-    <main id="main" className="subpage-shell get-started-shell">
-      <div className="subpage-container">
-        <nav className="subpage-breadcrumb" aria-label="Back navigation">
-          <Link to="/" className="back-link">
-            <span aria-hidden="true">←</span> Back to Home
-          </Link>
-        </nav>
+    <SubpageLayout shellClassName="get-started-shell">
+      <nav className="subpage-breadcrumb" aria-label="Back navigation">
+        <Link to="/" className="back-link">
+          <span aria-hidden="true">←</span> Back to Home
+        </Link>
+      </nav>
 
-        <header className="get-started-header">
-          <p className="label subpage-kicker">Your Learning Path</p>
-          <h1 className="subpage-title">
-            What would you like to <em>explore today?</em>
-          </h1>
-          <p className="subpage-subtitle">
-            Choose your path to learn, reflect, and strengthen your connection with the Qur’an and
-            Sunnah.
-          </p>
-        </header>
+      <header className="get-started-header">
+        <p className="label subpage-kicker">Your Learning Path</p>
+        <h1 className="subpage-title">
+          What would you like to <em>explore today?</em>
+        </h1>
+        <p className="subpage-subtitle">
+          Choose your path to learn, reflect, and strengthen your connection with the Qur’an and
+          Sunnah.
+        </p>
+      </header>
 
-        <section className="explore-grid" aria-label="Learning destinations">
-          {EXPLORE_PATHS.map((item, idx) => (
-            <motion.div
-              key={item.id}
-              initial={reducedMotion ? false : { opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: reducedMotion ? 0 : idx * 0.06 }}
-            >
-              <Link to={item.to} className="explore-card">
-                {item.ornament}
-                <div className="explore-card-top">
-                  <span className="explore-card-icon">{item.icon}</span>
-                  <span className="label explore-card-kicker">{item.kicker}</span>
-                </div>
-                <h2 className="explore-card-title">{item.title}</h2>
-                <p className="explore-card-desc">{item.description}</p>
-                <span className="explore-card-cta">
-                  <span>{item.cta}</span>
-                  <SvgIcon name="icon-arrow" />
-                </span>
-              </Link>
-            </motion.div>
-          ))}
-        </section>
-
-        <Footer />
-      </div>
-    </main>
+      <section className="explore-grid" aria-label="Learning destinations">
+        {EXPLORE_PATHS.map((item, idx) => (
+          <motion.div
+            key={item.id}
+            initial={reducedMotion ? false : { opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: reducedMotion ? 0 : idx * 0.06 }}
+          >
+            <Link to={item.to} className="explore-card">
+              {item.ornament}
+              <div className="explore-card-top">
+                <span className="explore-card-icon">{item.icon}</span>
+                <span className="label explore-card-kicker">{item.kicker}</span>
+              </div>
+              <h2 className="explore-card-title">{item.title}</h2>
+              <p className="explore-card-desc">{item.description}</p>
+              <span className="explore-card-cta">
+                <span>{item.cta}</span>
+                <SvgIcon name="icon-arrow" />
+              </span>
+            </Link>
+          </motion.div>
+        ))}
+      </section>
+    </SubpageLayout>
   )
 }
 

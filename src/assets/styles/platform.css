@@ -1,5 +1,21 @@
 /* Quran Bytes — Interactive Platform & Destination Routes Styles */
 
+/* Header Edge Alignment — logo extreme left, actions extreme right with consistent padding */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: max(clamp(16px, 2vw, 28px), env(safe-area-inset-left));
+  padding-right: max(clamp(16px, 2vw, 28px), env(safe-area-inset-right));
+}
+
+@media (max-width: 599px) {
+  .site-header {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+}
+
 .main-nav {
   gap: 10px;
 }
@@ -254,9 +270,33 @@
   }
 }
 
+/* Full-height flex-column application & subpage wrappers */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-layout > main {
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+.subpage-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  min-height: 100vh;
+  background: var(--ivory);
+  color: var(--ink);
+}
+
 /* Subpages Shared Shell */
 .subpage-shell {
-  min-height: 100svh;
+  flex: 1 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   padding: clamp(104px, 12.5vh, 128px) var(--pad-right) 0 var(--pad-left);
   background: var(--ivory);
   color: var(--ink);
@@ -266,6 +306,12 @@
   width: 100%;
   max-width: var(--content-max);
   margin-inline: auto;
+}
+
+.subpage-footer-band {
+  width: 100%;
+  padding: 0 var(--pad-right) 0 var(--pad-left);
+  background: var(--ivory);
 }
 
 .subpage-breadcrumb,
@@ -447,8 +493,9 @@
   .get-started-shell {
     display: flex;
     flex-direction: column;
-    min-height: 100svh;
+    min-height: 100vh;
     padding-top: clamp(72px, 8.6svh, 94px);
+    padding-bottom: clamp(20px, 3svh, 36px);
   }
 
   .get-started-shell .subpage-container {
@@ -1088,8 +1135,8 @@
 .auth-shell {
   display: flex;
   flex-direction: column;
-  min-height: 100svh;
-  padding: clamp(74px, 9svh, 96px) var(--pad-right) 0 var(--pad-left);
+  min-height: 100vh;
+  padding: clamp(74px, 9svh, 96px) var(--pad-right) clamp(32px, 4vh, 48px) var(--pad-left);
 }
 
 .auth-shell .auth-container {
@@ -1114,7 +1161,7 @@
   overflow: hidden;
   width: 100%;
   max-width: 492px;
-  margin: auto auto clamp(40px, 5vw, 56px);
+  margin: auto;
   padding: clamp(28px, 4.2vh, 42px) clamp(28px, 4.2vw, 44px);
   border: 1px solid #9da78f;
   border-radius: 16px;

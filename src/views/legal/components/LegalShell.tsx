@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import Footer from '@/components/template/Footer'
+import SubpageLayout from '@/components/layouts/SubpageLayout'
 import { cn } from '@/utils/classNames'
 
 export interface LegalShellProps {
@@ -27,39 +27,33 @@ export function LegalShell({
   const { pathname } = useLocation()
 
   return (
-    <main id="main" className="subpage-shell legal-shell">
-      <div className="subpage-container legal-container">
-        <div className="subpage-topbar">
-          <Link to="/" className="back-link">
-            <span aria-hidden="true">←</span> Back to Home
-          </Link>
-          <nav className="legal-tab-nav" aria-label="Legal documents">
-            {LEGAL_TABS.map((tab) => (
-              <Link
-                key={tab.to}
-                to={tab.to}
-                className={cn('topic-chip', pathname === tab.to && 'is-active')}
-              >
-                {tab.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        <header className="legal-header">
-          <p className="label subpage-kicker">{kicker}</p>
-          <h1 className="subpage-title">{title}</h1>
-          <p className="subpage-subtitle">{summary}</p>
-          <p className="legal-updated">Last updated: {lastUpdated}</p>
-        </header>
-
-        <article className="legal-article">{children}</article>
+    <SubpageLayout shellClassName="legal-shell" containerClassName="legal-container">
+      <div className="subpage-topbar">
+        <Link to="/" className="back-link">
+          <span aria-hidden="true">←</span> Back to Home
+        </Link>
+        <nav className="legal-tab-nav" aria-label="Legal documents">
+          {LEGAL_TABS.map((tab) => (
+            <Link
+              key={tab.to}
+              to={tab.to}
+              className={cn('topic-chip', pathname === tab.to && 'is-active')}
+            >
+              {tab.label}
+            </Link>
+          ))}
+        </nav>
       </div>
 
-      <div className="subpage-container">
-        <Footer />
-      </div>
-    </main>
+      <header className="legal-header">
+        <p className="label subpage-kicker">{kicker}</p>
+        <h1 className="subpage-title">{title}</h1>
+        <p className="subpage-subtitle">{summary}</p>
+        <p className="legal-updated">Last updated: {lastUpdated}</p>
+      </header>
+
+      <article className="legal-article">{children}</article>
+    </SubpageLayout>
   )
 }
 
