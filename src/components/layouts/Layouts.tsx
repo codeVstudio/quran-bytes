@@ -17,11 +17,34 @@ const layouts: Record<LayoutType, LayoutComponent> = {
 
 export function Layouts() {
   const layoutType = useAppSelector((state) => state.theme.layout.type)
-  const { pathname } = useLocation()
+  const { pathname, search, hash, key } = useLocation()
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-  }, [pathname])
+    if (!hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+      return
+    }
+
+    const targetId = hash.slice(1)
+    let frameId = 0
+    let attempts = 0
+    const maxAttempts = 20
+
+    const scrollToTarget = () => {
+      const target = document.getElementById(targetId)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        return
+      }
+      attempts += 1
+      if (attempts < maxAttempts) {
+        frameId = window.requestAnimationFrame(scrollToTarget)
+      }
+    }
+
+    frameId = window.requestAnimationFrame(scrollToTarget)
+    return () => window.cancelAnimationFrame(frameId)
+  }, [pathname, search, hash, key])
 
   const AppLayout = useMemo(() => layouts[layoutType] ?? layouts.blank, [layoutType])
 

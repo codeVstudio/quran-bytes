@@ -31,7 +31,9 @@ export function AuthShell({ kicker, title, subtitle, children }: AuthShellProps)
 
           {children}
         </section>
+      </div>
 
+      <div className="subpage-container">
         <Footer />
       </div>
     </main>

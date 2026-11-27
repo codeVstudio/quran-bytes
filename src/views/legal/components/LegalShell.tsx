@@ -54,7 +54,9 @@ export function LegalShell({
         </header>
 
         <article className="legal-article">{children}</article>
+      </div>
 
+      <div className="subpage-container">
         <Footer />
       </div>
     </main>

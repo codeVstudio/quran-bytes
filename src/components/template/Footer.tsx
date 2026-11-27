@@ -1,58 +1,104 @@
 import { Link, useLocation } from 'react-router-dom'
-import SvgIcon from '@/components/shared/SvgIcon'
-import {
-  BRAND_CREDIT_NAME,
-  BRAND_CREDIT_URL,
-  COPYRIGHT_YEAR,
-} from '@/constants/app.constant'
+import { APP_NAME, BRAND_CREDIT_URL, COPYRIGHT_YEAR } from '@/constants/app.constant'
+
+interface FooterLinkItem {
+  label: string
+  to: string
+}
+
+interface FooterColumn {
+  title: string
+  links: FooterLinkItem[]
+}
+
+const FOOTER_COLUMNS: FooterColumn[] = [
+  {
+    title: 'Explore',
+    links: [
+      { label: 'Read Quran', to: '/read' },
+      { label: 'Translations', to: '/translation' },
+      { label: 'Duas', to: '/dua-hadith?category=dua' },
+      { label: 'Hadith', to: '/dua-hadith?category=hadith' },
+    ],
+  },
+  {
+    title: 'Discover',
+    links: [
+      { label: 'AI Islamic Assistant', to: '/assistant' },
+      { label: 'About Us', to: '/#explore' },
+      { label: 'Our Vision', to: '/#vision' },
+      { label: 'Contact', to: '/#get-involved' },
+    ],
+  },
+  {
+    title: 'Legal & Information',
+    links: [
+      { label: 'Privacy Policy', to: '/privacy-policy' },
+      { label: 'Terms of Service', to: '/terms-of-service' },
+      { label: 'Cookie Policy', to: '/cookie-policy' },
+    ],
+  },
+]
 
 export function Footer() {
-  const { pathname } = useLocation()
-  const isHome = pathname === '/'
+  const { pathname, hash } = useLocation()
+  const isHomeTop = pathname === '/' && !hash
 
   return (
-    <footer className="site-footer">
-      <Link
-        className="footer-wordmark"
-        to="/"
-        onClick={(e) => {
-          if (isHome) {
-            e.preventDefault()
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-          }
-        }}
-      >
-        quran <i>bytes</i>.
-      </Link>
-      <div className="site-footer-meta">
-        <p>
-          Built by{' '}
+    <footer className="site-footer" aria-label="Footer">
+      <div className="footer-grid">
+        <div className="footer-brand">
+          <Link
+            className="footer-wordmark"
+            to="/"
+            onClick={(e) => {
+              if (isHomeTop) {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }
+            }}
+          >
+            quran <i>bytes</i>.
+          </Link>
+          <p className="footer-desc">
+            A beautiful space to read, understand and connect with the Quran.
+          </p>
+        </div>
+
+        {FOOTER_COLUMNS.map((column) => (
+          <nav
+            key={column.title}
+            className="footer-col"
+            aria-label={column.title}
+          >
+            <h2 className="footer-heading">{column.title}</h2>
+            <ul className="footer-links">
+              {column.links.map((item) => (
+                <li key={item.to}>
+                  <Link className="footer-link" to={item.to}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))}
+      </div>
+
+      <div className="footer-copyright-bar">
+        <p className="footer-copyright">
+          &copy; {COPYRIGHT_YEAR} {APP_NAME}. Built with care by{' '}
           <a
             className="footer-credit-link"
             href={BRAND_CREDIT_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {BRAND_CREDIT_NAME}
-          </a>{' '}
-          · Copyright &copy; {COPYRIGHT_YEAR}
+            CodeVstudio
+          </a>
+          .
         </p>
-        <nav className="footer-legal-nav" aria-label="Legal">
-          <span className="footer-legal-label">Legal</span>
-          <Link to="/privacy-policy">Privacy Policy</Link>
-          <span aria-hidden="true">·</span>
-          <Link to="/terms-of-service">Terms of Service</Link>
-          <span aria-hidden="true">·</span>
-          <Link to="/cookie-policy">Cookie Policy</Link>
-        </nav>
       </div>
-      <button
-        type="button"
-        className="back-top label"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-        Back to top <SvgIcon name="icon-arrow-up" />
-      </button>
     </footer>
   )
 }

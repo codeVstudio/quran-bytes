@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import type { DuaHadithCategory, DuaHadithTopic } from '@/@types/quran'
 import Footer from '@/components/template/Footer'
 import { DUA_HADITH_CATALOG } from '@/data/duaHadithCatalog'
@@ -20,8 +20,21 @@ const TOPICS: Array<'All' | DuaHadithTopic> = [
 export function DuaHadithView() {
   const dispatch = useAppDispatch()
   const bookmarkedIds = useAppSelector((state) => state.study.bookmarkedEntries)
+  const { key: locationKey } = useLocation()
+  const [searchParams] = useSearchParams()
+  const rawCategory = searchParams.get('category')
+  const urlCategory: 'all' | DuaHadithCategory | 'saved' =
+    rawCategory === 'dua' || rawCategory === 'hadith' || rawCategory === 'saved'
+      ? rawCategory
+      : 'all'
 
-  const [categoryFilter, setCategoryFilter] = useState<'all' | DuaHadithCategory | 'saved'>('all')
+  const [categoryFilter, setCategoryFilter] = useState<'all' | DuaHadithCategory | 'saved'>(
+    urlCategory,
+  )
+
+  useEffect(() => {
+    setCategoryFilter(urlCategory)
+  }, [urlCategory, locationKey])
   const [topicFilter, setTopicFilter] = useState<'All' | DuaHadithTopic>('All')
   const [search, setSearch] = useState('')
   const [copiedId, setCopiedId] = useState<string | null>(null)
